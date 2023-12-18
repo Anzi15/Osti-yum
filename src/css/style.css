@@ -91,20 +91,19 @@ nav .nav-toggler {
   display: block !important;
 }
 
-button {
+.cta-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cta-btn button {
   border: none;
   padding: 0.75em 2.2em;
   border-radius: 0.25em;
   margin: 0.3rem;
   font-size: 1.1em;
   font-weight: 700;
-}
-
-.cta-btn {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 .cta-btn button:first-child {
   background: hsl(169, 100%, 26%);
@@ -206,23 +205,6 @@ section {
 .sec-2 .big-flex-group .product img {
   width: 100%;
   object-fit: cover;
-}
-.sec-2 .the-last-btn {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-.sec-2 .the-last-btn button {
-  background: none;
-  border: 2px solid #1b1b1b;
-}
-.sec-2 .the-last-btn button:hover {
-  background-color: #1b1b1b;
-  color: #F3F3F3;
-}
-.sec-2 .the-last-btn button:active {
-  outline: 0.125em solid #1b1b1b;
-  outline-offset: 0.25em;
 }
 
 @media (max-width: 570px) {

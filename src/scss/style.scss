@@ -92,20 +92,18 @@ nav{
 .visible{
     display: block !important;
 }
-button{
-    border: none;
-    padding: 0.75em 2.2em;
-    border-radius: 0.25em;
-    margin: .3rem;
-    font-size: 1.1em;
-    font-weight: 700;
-}
 .cta-btn{
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     button{
+        border: none;
+        padding: 0.75em 2.2em;
+        border-radius: 0.25em;
+        margin: .3rem;
+        font-size: 1.1em;
+        font-weight: 700;
         &:first-child{
             background: $color-light-green;
             color: white;
@@ -212,23 +210,6 @@ section{
             }
             width: 40%;
 
-        }
-    }
-    .the-last-btn{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        button{
-            background: none;
-            border: 2px solid $color-dark;
-            &:hover{
-                background-color: $color-dark;
-                color: $color-bg;
-            }
-            &:active{
-                outline: 0.125em solid $color-dark;
-                outline-offset: 0.25em;
-            }
         }
     }
 }
