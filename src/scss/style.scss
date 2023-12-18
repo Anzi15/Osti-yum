@@ -77,7 +77,8 @@ nav{
             width: 25%;
             min-width: 15rem;
             align-items: center;
-            background-color: $color-sky-blue;
+            background-color: $color-ultra-light-green;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         }
         
     }
@@ -91,15 +92,55 @@ nav{
 .visible{
     display: block !important;
 }
+button{
+    border: none;
+    padding: 0.75em 2.2em;
+    border-radius: 0.25em;
+    margin: .3rem;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+.cta-btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    button{
+        &:first-child{
+            background: $color-light-green;
+            color: white;
+            &:hover{
+                background: $color-dark-green;
+            }
+            &:focus{
+                outline: 0.125em solid $color-dark-green;
+                outline-offset: 0.25em;
+            }
+        }
+        &:nth-child(2){
+            background: none;
+            border: 2px solid $color-dark;
+            &:hover{
+                background-color: $color-dark;
+                color: $color-bg;
+            }
+            &:active{
+                outline: 0.125em solid $color-dark;
+                outline-offset: 0.25em;
+            }
+        }
+    }
+}
 //sections
 section{
     width: 100vw;
-    height: 70vh;
 }
 //section 1
 .sec-1{
+    height: 75vh;
     display: flex;
     align-items: center;
+    overflow: hidden;
     .txt{
         margin-left: 5%;
         width: 40%;
@@ -114,43 +155,6 @@ section{
         p{
             font-size: 1rem;
             line-height: 1.5rem;
-        }
-        .cta-btn{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            button{
-                border: none;
-                padding: 0.75em 2.5em;
-                border-radius: 0.25em;
-                margin: .3rem;
-                font-size: 1.1em;
-                font-weight: 700;
-                &:first-child{
-                    background: $color-light-green;
-                    color: white;
-                    &:hover{
-                        background: $color-dark-green;
-                    }
-                    &:focus{
-                        outline: 0.125em solid $color-dark-green;
-                        outline-offset: 0.25em;
-                    }
-                }
-                &:nth-child(2){
-                    background: none;
-                    border: 2px solid $color-dark;
-                    &:hover{
-                        background-color: $color-dark;
-                        color: $color-bg;
-                    }
-                    &:active{
-                        outline: 0.125em solid $color-dark;
-                        outline-offset: 0.25em;
-                    }
-                }
-            }
         }
     }
     .img-container{
@@ -181,3 +185,62 @@ section{
 }
 
 //section 2
+.sec-2{
+    background: $color-ultra-light-green;
+    .title-heading{
+        margin: 3.5rem 0;
+        font-size: 2rem;
+        text-align: center;
+        color: $color-dark-green;
+    }
+
+    .big-flex-group{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .product{
+            .textarea{
+                h2,p{
+                    margin: 1rem 0;
+                }
+            }
+            margin: 3rem 0;
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+            width: 40%;
+
+        }
+    }
+    .the-last-btn{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        button{
+            background: none;
+            border: 2px solid $color-dark;
+            &:hover{
+                background-color: $color-dark;
+                color: $color-bg;
+            }
+            &:active{
+                outline: 0.125em solid $color-dark;
+                outline-offset: 0.25em;
+            }
+        }
+    }
+}
+@media (max-width:$breakpoint-mobile) {
+    .sec-2{
+        .product{
+            width: 90vw !important;
+        }
+    }
+    .cta-btn{
+        button{
+            padding: 0.75em 2em !important;
+        }
+    }
+}

@@ -69,7 +69,8 @@ nav .nav-toggler {
     width: 25%;
     min-width: 15rem;
     align-items: center;
-    background-color: #C6E0FF;
+    background-color: hsl(169, 70%, 95%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
   .nav-links ul button {
     border: none;
@@ -90,14 +91,54 @@ nav .nav-toggler {
   display: block !important;
 }
 
+button {
+  border: none;
+  padding: 0.75em 2.2em;
+  border-radius: 0.25em;
+  margin: 0.3rem;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.cta-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cta-btn button:first-child {
+  background: hsl(169, 100%, 26%);
+  color: white;
+}
+.cta-btn button:first-child:hover {
+  background: hsl(169, 100%, 16%);
+}
+.cta-btn button:first-child:focus {
+  outline: 0.125em solid hsl(169, 100%, 16%);
+  outline-offset: 0.25em;
+}
+.cta-btn button:nth-child(2) {
+  background: none;
+  border: 2px solid #1b1b1b;
+}
+.cta-btn button:nth-child(2):hover {
+  background-color: #1b1b1b;
+  color: #F3F3F3;
+}
+.cta-btn button:nth-child(2):active {
+  outline: 0.125em solid #1b1b1b;
+  outline-offset: 0.25em;
+}
+
 section {
   width: 100vw;
-  height: 70vh;
 }
 
 .sec-1 {
+  height: 75vh;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 .sec-1 .txt {
   margin-left: 5%;
@@ -114,43 +155,6 @@ section {
 .sec-1 .txt p {
   font-size: 1rem;
   line-height: 1.5rem;
-}
-.sec-1 .txt .cta-btn {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.sec-1 .txt .cta-btn button {
-  border: none;
-  padding: 0.75em 2.5em;
-  border-radius: 0.25em;
-  margin: 0.3rem;
-  font-size: 1.1em;
-  font-weight: 700;
-}
-.sec-1 .txt .cta-btn button:first-child {
-  background: hsl(169, 100%, 26%);
-  color: white;
-}
-.sec-1 .txt .cta-btn button:first-child:hover {
-  background: hsl(169, 100%, 16%);
-}
-.sec-1 .txt .cta-btn button:first-child:focus {
-  outline: 0.125em solid hsl(169, 100%, 16%);
-  outline-offset: 0.25em;
-}
-.sec-1 .txt .cta-btn button:nth-child(2) {
-  background: none;
-  border: 2px solid #1b1b1b;
-}
-.sec-1 .txt .cta-btn button:nth-child(2):hover {
-  background-color: #1b1b1b;
-  color: #F3F3F3;
-}
-.sec-1 .txt .cta-btn button:nth-child(2):active {
-  outline: 0.125em solid #1b1b1b;
-  outline-offset: 0.25em;
 }
 .sec-1 .img-container {
   width: 60%;
@@ -175,6 +179,58 @@ section {
   }
   .sec-1 .img-container img {
     width: 100%;
+  }
+}
+.sec-2 {
+  background: hsl(169, 70%, 95%);
+}
+.sec-2 .title-heading {
+  margin: 3.5rem 0;
+  font-size: 2rem;
+  text-align: center;
+  color: hsl(169, 100%, 16%);
+}
+.sec-2 .big-flex-group {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.sec-2 .big-flex-group .product {
+  margin: 3rem 0;
+  width: 40%;
+}
+.sec-2 .big-flex-group .product .textarea h2, .sec-2 .big-flex-group .product .textarea p {
+  margin: 1rem 0;
+}
+.sec-2 .big-flex-group .product img {
+  width: 100%;
+  object-fit: cover;
+}
+.sec-2 .the-last-btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.sec-2 .the-last-btn button {
+  background: none;
+  border: 2px solid #1b1b1b;
+}
+.sec-2 .the-last-btn button:hover {
+  background-color: #1b1b1b;
+  color: #F3F3F3;
+}
+.sec-2 .the-last-btn button:active {
+  outline: 0.125em solid #1b1b1b;
+  outline-offset: 0.25em;
+}
+
+@media (max-width: 570px) {
+  .sec-2 .product {
+    width: 90vw !important;
+  }
+  .cta-btn button {
+    padding: 0.75em 2em !important;
   }
 }
 
