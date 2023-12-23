@@ -129,6 +129,16 @@ nav{
         }
     }
 }
+// utilities classes
+.title-heading{
+    margin: 3.5rem 0;
+    font-size: 2rem;
+    color: $color-dark-green;
+}
+.cen{
+    text-align: center;
+
+}
 //sections
 section{
     width: 100vw;
@@ -185,12 +195,7 @@ section{
 //section 2
 .sec-2{
     background: $color-ultra-light-green;
-    .title-heading{
-        margin: 3.5rem 0;
-        font-size: 2rem;
-        text-align: center;
-        color: $color-dark-green;
-    }
+    
 
     .big-flex-group{
         display: flex;
@@ -222,6 +227,27 @@ section{
     .cta-btn{
         button{
             padding: 0.75em 2em !important;
+        }
+    }
+}
+
+//section 3
+.sec-3{
+    height: 100vh;
+    .box-thingie{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        .textarea{
+            width: 40%;
+            
+        }
+        .img{
+            width: 50%;
+            img{
+                width: 100%;
+            }
         }
     }
 }

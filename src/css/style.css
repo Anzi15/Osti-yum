@@ -129,6 +129,16 @@ nav .nav-toggler {
   outline-offset: 0.25em;
 }
 
+.title-heading {
+  margin: 3.5rem 0;
+  font-size: 2rem;
+  color: hsl(169, 100%, 16%);
+}
+
+.cen {
+  text-align: center;
+}
+
 section {
   width: 100vw;
 }
@@ -183,12 +193,6 @@ section {
 .sec-2 {
   background: hsl(169, 70%, 95%);
 }
-.sec-2 .title-heading {
-  margin: 3.5rem 0;
-  font-size: 2rem;
-  text-align: center;
-  color: hsl(169, 100%, 16%);
-}
 .sec-2 .big-flex-group {
   display: flex;
   width: 100%;
@@ -214,6 +218,24 @@ section {
   .cta-btn button {
     padding: 0.75em 2em !important;
   }
+}
+.sec-3 {
+  height: 100vh;
+}
+.sec-3 .box-thingie {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.sec-3 .box-thingie .textarea {
+  width: 40%;
+}
+.sec-3 .box-thingie .img {
+  width: 50%;
+}
+.sec-3 .box-thingie .img img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
