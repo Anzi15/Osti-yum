@@ -7,9 +7,8 @@ async function fecther(){
 }
 
 function loadInDom(data){
-    console.log(data.speacialitites)
+    //loading speacialities products on homepage
     data.speacialitites.forEach(data => {
-        console.log(data)
         loader(speacialitites_con,data)
     });
 }
