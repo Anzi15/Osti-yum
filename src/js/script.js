@@ -1,13 +1,11 @@
 const navlink = document.getElementById('nav-link');
-const nav_visible = document.getElementById('open-nav');
-const nav_invisible = document.getElementById('close_nav');
+const nav_toggler = document.getElementById('open-nav');
 const footer_year = document.getElementById('year');
 
-nav_invisible.addEventListener('click',toggleView)
-nav_visible.addEventListener('click',toggleView)
+nav_toggler.addEventListener('click',toggleView)
 
 function toggleView(){
-    navlink.classList.toggle('visible')
+    navlink.classList.toggle('visible-nav')
 }
 function footerYearUpdater(){
     footer_year.innerHTML
@@ -15,5 +13,3 @@ function footerYearUpdater(){
 }
 
 window.addEventListener('load',footerYearUpdater)
-
-console.log(window.location)

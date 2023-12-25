@@ -22,7 +22,9 @@ nav {
   width: 90vw;
   justify-content: space-between;
 }
-nav h1 {
+nav .nav-heading {
+  color: #1b1b1b;
+  text-decoration: none;
   display: flex;
   align-items: center;
 }
@@ -62,7 +64,7 @@ nav .nav-toggler {
     display: flex;
     flex-direction: column !important;
     position: fixed;
-    right: 0;
+    right: -300px !important;
     top: 0;
     padding: 24vh 0;
     height: 100vh;
@@ -82,13 +84,17 @@ nav .nav-toggler {
   }
   .nav-toggler {
     display: block !important;
+    z-index: 999 !important;
   }
   nav {
     padding: 1.7rem;
   }
 }
-.visible {
+.visible-nav {
   display: block !important;
+}
+.visible-nav ul {
+  right: 0 !important;
 }
 
 .cta-btn {

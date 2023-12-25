@@ -13,17 +13,23 @@ function loadInDom(data){
     });
 }
 const loader = (elem,data)=>{
- elem.innerHTML += `<div class="product">
- <div class="img">
- <img src="${data.image[0]}" alt="">
- </div>
- <div class="textarea">
-     <h2>${data.title}</h2>
-     <p>${data.description}</p>
+    let data_description_ultered ;
+    if(data.description.length>120){
+        data_description_ultered =data.description.split(0,80);
+
+        console.log(data_description_ultered)
+    }
+    elem.innerHTML += `<div class="product">
+    <div class="img">
+    <img height="25%" src="${data.image[0]}" alt="${data.title} image">
+    </div>
+    <div class="textarea">
+    <h2>${data.title}</h2> 
+     <p>${data_description_ultered}</p>
      
  </div>
  <div class="cta-btn">
-     <a href="${window.location.origin}/product" onclick="addUrlProductPara('${data.product_Id}')">
+     <a href="${window.location.origin}/product" onclick="setLocalStorage('${data.product_Id}')">
          Buy now
      </a>
      <a onclick="addToCart('${data.product_Id}')">
@@ -34,8 +40,8 @@ const loader = (elem,data)=>{
 
 }
 
-function addUrlProductPara(para) {
- localStorage.setItem('current_product_id',para)  
+function setLocalStorage(product_Id) {
+ localStorage.setItem('current_product_id',product_Id)  
 }
 
 function addToCart(product_Id){

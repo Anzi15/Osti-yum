@@ -16,7 +16,9 @@ body{
 }
 // navbar
 nav{
-    h1{
+    .nav-heading{
+        color: $color-dark;
+        text-decoration: none;
         display: flex;
         align-items: center;
     }
@@ -53,12 +55,16 @@ nav{
     }
     .nav-toggler{
         display: none;
+
     }
 }
+
 @media (max-width:$breakpoint-tablet) {
     .nav-links{
         display: none;
+
         ul{
+    
             button{
                 border: none;
                 background: none;
@@ -70,7 +76,7 @@ nav{
             display: flex;
             flex-direction: column !important;
             position: fixed;
-            right: 0;
+            right: -300px !important;
             top: 0;
             padding: 24vh 0;
             height: 100vh;
@@ -82,14 +88,19 @@ nav{
         }
         
     }
+    
     .nav-toggler{
         display: block !important;
+        z-index: 999 !important;
     }
     nav{
         padding: 1.7rem;
     }
 }
-.visible{
+.visible-nav{
+    ul{
+        right: 0 !important;
+    }
     display: block !important;
 }
 .cta-btn{
