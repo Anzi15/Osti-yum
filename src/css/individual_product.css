@@ -1,0 +1,141 @@
+li {
+  list-style-type: none;
+}
+
+.product_section {
+  display: flex;
+  padding: 1rem;
+}
+.product_section .crousel ul {
+  width: 50vw;
+}
+.product_section .crousel ul button {
+  border: none;
+  background: none;
+  outline: none;
+}
+.product_section .crousel ul button li {
+  display: flex;
+}
+.product_section .crousel ul button li img {
+  display: flex;
+  width: 50%;
+}
+.product_section .crousel ul #big_img {
+  width: 100% !important;
+}
+.product_section .crousel ul .short_imgs {
+  display: flex;
+  width: 100%;
+  gap: 0 0.7rem;
+}
+.product_section .crousel ul .short_imgs img {
+  width: 98% !important;
+  margin: 0.7rem 0;
+}
+.product_section .text-area-container {
+  margin: 1rem;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.product_section .text-area-container .text-area {
+  width: 60%;
+}
+.product_section .text-area-container .text-area .product_title {
+  font-weight: 520;
+  font-size: 2rem;
+  word-spacing: 0.3rem;
+  line-height: 3rem;
+  margin: 2rem 0;
+}
+.product_section .text-area-container .text-area .price_con {
+  margin: 2rem 0.5rem;
+}
+.product_section .text-area-container .text-area .price_con .compared_price {
+  text-decoration: line-through;
+}
+.product_section .text-area-container .text-area .price_con .price {
+  margin: 1rem 0.2rem;
+  font-size: 1.7rem;
+}
+.product_section .text-area-container .text-area .individual-cta-btn {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.product_section .text-area-container .text-area .individual-cta-btn button, .product_section .text-area-container .text-area .individual-cta-btn a {
+  width: 100%;
+  border: none;
+  padding: 0.75em 2.2em;
+  border-radius: 0.25em;
+  margin: 0.3rem;
+  font-size: 1.1em;
+  font-weight: 700;
+}
+.product_section .text-area-container .text-area .individual-cta-btn button:nth-child(2), .product_section .text-area-container .text-area .individual-cta-btn a:nth-child(2) {
+  text-decoration: none;
+  background: hsl(169, 100%, 26%);
+  color: white;
+}
+.product_section .text-area-container .text-area .individual-cta-btn button:nth-child(2):hover, .product_section .text-area-container .text-area .individual-cta-btn a:nth-child(2):hover {
+  background: hsl(169, 100%, 16%);
+}
+.product_section .text-area-container .text-area .individual-cta-btn button:nth-child(2):focus, .product_section .text-area-container .text-area .individual-cta-btn a:nth-child(2):focus {
+  outline: 0.125em solid hsl(169, 100%, 16%);
+  outline-offset: 0.25em;
+}
+.product_section .text-area-container .text-area .individual-cta-btn button:first-child, .product_section .text-area-container .text-area .individual-cta-btn a:first-child {
+  background: none;
+  border: 2px solid #1b1b1b;
+}
+.product_section .text-area-container .text-area .individual-cta-btn button:first-child:hover, .product_section .text-area-container .text-area .individual-cta-btn a:first-child:hover {
+  background-color: #1b1b1b;
+  color: #F3F3F3;
+}
+.product_section .text-area-container .text-area .individual-cta-btn button:first-child:active, .product_section .text-area-container .text-area .individual-cta-btn a:first-child:active {
+  outline: 0.125em solid #1b1b1b;
+  outline-offset: 0.25em;
+}
+.product_section .text-area-container .text-area .product_description {
+  line-height: 1.4rem;
+  word-spacing: 0.01rem;
+  letter-spacing: 0.01rem;
+  color: #121212;
+}
+.product_section .text-area-container .text-area .quantity-con {
+  padding: 1rem 0;
+}
+.product_section .text-area-container .text-area .quantity-con quantity-input {
+  margin: 1rem 0;
+  display: flex;
+  height: 3rem;
+  width: 35%;
+  border: 1.5px solid #1b1b1b;
+  margin: 0;
+  margin: 0.5rem 0;
+}
+.product_section .text-area-container .text-area .quantity-con quantity-input button, .product_section .text-area-container .text-area .quantity-con quantity-input input {
+  aspect-ratio: 1/1;
+  border: none;
+  background: none;
+  font-size: 1rem;
+  text-align: center;
+}
+.product_section .text-area-container .text-area .quantity-con quantity-input button {
+  transition: 0.2s;
+  font-size: 1.3rem;
+}
+.product_section .text-area-container .text-area .quantity-con quantity-input button:active {
+  background: #C6E0FF;
+}
+.product_section .text-area-container .text-area .quantity-con quantity-input input::-webkit-inner-spin-button, .product_section .text-area-container .text-area .quantity-con quantity-input input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+.product_section .text-area-container .text-area .quantity-con quantity-input input:focus-visible {
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+/*# sourceMappingURL=individual_product.css.map */

@@ -32,7 +32,10 @@ function getParameter(key) {
 async function fecther(){
     await fetch('../src/json/products.json')
     .then(response => response.json())
-    .then(data => loadInDom(data));
+    .then(response => {
+        loadInDom(response)
+    })
+       
 }
 
 const loadInDom = function(data){
@@ -40,7 +43,7 @@ const loadInDom = function(data){
 }
 
 const productSearher = function(query, data){
-    console.log("product search sarte",query, data)
+
     for(let i=0; i<data.length; i++){
         if(data[i].product_Id == query){
             loadProduct(data[i])

@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/individual_product.css">
     
     <script defer src="../src/js/script.js"></script>
     <script defer src="../src/js/product.js"></script>
+    <script defer src="../src/js/individual_product.js"></script>
 </head>
 <body>
     <nav>
@@ -44,8 +46,61 @@
         
     </nav>
 
-    <section>
+    <section class="product_section">
+        <div id="crousel" class="crousel">
+            <ul>
+                <button>
+                    <li>
+                        <img id="big_img" src="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=1488&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    </li>
+                </button>
+                <div class="short_imgs">
+                    <button>
+                        <li>
+                            <img src="https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        </li>
+                    </button>
+    
+                    <button>
+                        <li>
+                            <img src="https://images.unsplash.com/photo-1630851840633-f96999247032?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        </li>
+                    </button>
+                </div>
+            </ul>
+        </div>
+        <div class="text-area-container">
+            <div class="text-area">
+                <div class="product_title_con">
 
+                    <h2 class="product_title">Lorem ipsum dolor sit. Lorem, ipsum.</h2>
+
+                </div>
+
+                <div class="price_con">
+                    <p class="compared_price">Rs. 2000</p>
+                    <p class="price">Rs. 1000</p>
+                </div>
+
+                <div class="individual-cta-btn">
+                    <button>Add to cart</button>
+                    <button>Buy it now</button>
+                </div>
+
+                <div class="quantity-con">
+                    <p>Quantity</p>
+                    <quantity-input class="quantity">
+                        <button id="qtty-mns-btn">-</button>
+                        <input type="number" value="1" name="" id="quantity-inp">
+                        <button id="qtty-pls-btn">+</button>
+                    </quantity-inp>
+                </div>
+
+                <div class="des-con">
+                    <p class="product_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti dolore, aliquam quasi, temporibus maiores beatae illo, nam quae a dignissimos odit. Labore voluptas odit, optio eius quia nemo quas exercitationem tenetur! Corrupti, nesciunt officiis accusantium numquam, quaerat laboriosam accusamus dignissimos sed ipsam, voluptate ea facilis quod quae illum libero.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
