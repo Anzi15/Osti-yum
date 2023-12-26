@@ -4,9 +4,12 @@
                 "title":" Chicken Karahi",
                 "description":"Discover the culinary magic of our Chicken Karahi, a symphony of aromatic spices and succulent chicken pieces cooked to perfection. Immerse yourself in the rich, bold flavors of this traditional dish, where the smoky essence of the karahi enhances the natural taste of tender chicken. Each bite is a journey through the heart of Pakistani cuisine",
                 "image":[
-                    "https://images.unsplash.com/photo-1603496987351-f84a3ba5ec85?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    "https://images.unsplash.com/photo-1603496987351-f84a3ba5ec85?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "https://img.freepik.com/free-photo/front-view-cooked-vegetable-meal-inside-pan-brown-wooden-desk_140725-61551.jpg?w=740&t=st=1703584159~exp=1703584759~hmac=bc9986a6edb692a2ab37eba60d68d1e78656871e14e5725b233bf5b6b0a9d115"
                 ],
-                "product_Id":"CK2023-002"
+                "product_Id":"CK2023-002",
+                "price": "Rs. 999",
+                "compared_price": "Rs. 1650"
             },
             {
                 "title":"Bombay biryani",
@@ -16,7 +19,10 @@
                     "https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                     "https://images.unsplash.com/photo-1630851840633-f96999247032?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 ],
-                "product_Id":"BB2023-003"
+                "product_Id":"BB2023-003",
+                "price": "Rs. 499",
+                "compared_price": "Rs. 799"
+
             },
             {
                 "title":"Barbeque",
@@ -32,8 +38,13 @@
                 "title":"Chinese Biryani",
                 "description":"Savor the fusion in our Chinese Biryani! Fragrant basmati, stir-fried veggies, and tender chicken blend with Chinese spices for a unique culinary experience. Elevate your dining with this delicious crossover!",
                 "image":[
-                    "https://images.unsplash.com/photo-1633945274417-ab205ae69d10?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-                "product_Id":"CB2023-001"
+                    "https://images.unsplash.com/photo-1633945274417-ab205ae69d10?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "https://images.unsplash.com/photo-1552590635-27c2c2128abf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "https://img.freepik.com/free-photo/view-tasty-rice-meal-dinner-with-pisum-carrot-purple-stripped-towel-its-ingredients-blue-table_140725-160444.jpg?w=740&t=st=1703584501~exp=1703585101~hmac=79eefc9c61f3ce22ff0ef93020737aac58dfe0898547b7bd67a595a2cca2a598"
+                ],
+                "product_Id":"CB2023-001",
+                "price": "Rs. 599",
+                "compared_price": "Rs. 899"
             }
         ],
         "all_products":[
@@ -41,9 +52,13 @@
                 "title":" Chicken Karahi",
                 "description":"Discover the culinary magic of our Chicken Karahi, a symphony of aromatic spices and succulent chicken pieces cooked to perfection. Immerse yourself in the rich, bold flavors of this traditional dish, where the smoky essence of the karahi enhances the natural taste of tender chicken. Each bite is a journey through the heart of Pakistani cuisine",
                 "image":[
-                    "https://images.unsplash.com/photo-1603496987351-f84a3ba5ec85?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    "https://images.unsplash.com/photo-1603496987351-f84a3ba5ec85?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "https://img.freepik.com/free-photo/front-view-cooked-vegetable-meal-inside-pan-brown-wooden-desk_140725-61551.jpg?w=740&t=st=1703584159~exp=1703584759~hmac=bc9986a6edb692a2ab37eba60d68d1e78656871e14e5725b233bf5b6b0a9d115",
+                    "https://img.freepik.com/free-photo/chicken-fried-hot-pot-with-spicy-sauce-korean-style_1150-42868.jpg?w=740&t=st=1703585345~exp=1703585945~hmac=a71218e84b6d9f0c207c3bad3917849bb9212d7ec58334b79a5ca5b0d0c7154b"
                 ],
-                "product_Id":"CK2023-002"
+                "product_Id":"CK2023-002",
+                "price": "Rs. 999",
+                "compared_price": "Rs. 1650"
             },
             {
                 "title":"Bombay biryani",
@@ -53,7 +68,10 @@
                     "https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                     "https://images.unsplash.com/photo-1630851840633-f96999247032?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 ],
-                "product_Id":"BB2023-003"
+                "product_Id":"BB2023-003",
+                "price": "Rs. 499",
+                "compared_price": "Rs. 799"
+
             },
             {
                 "title":"Barbeque",
@@ -63,14 +81,21 @@
                     "https://images.unsplash.com/photo-1632158929413-168599fffbf7?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                     "https://images.unsplash.com/photo-1571302703929-6209091a75fa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 ],
-                "product_Id":"BBQ2023-004"
+                "product_Id":"BBQ2023-004",
+                "price": "Rs. 1299",
+                "compared_price": "Rs. 1899"
             },
             {
                 "title":"Chinese Biryani",
                 "description":"Savor the fusion in our Chinese Biryani! Fragrant basmati, stir-fried veggies, and tender chicken blend with Chinese spices for a unique culinary experience. Elevate your dining with this delicious crossover!",
                 "image":[
-                    "https://images.unsplash.com/photo-1633945274417-ab205ae69d10?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"],
-                "product_Id":"CB2023-001"
+                    "https://images.unsplash.com/photo-1633945274417-ab205ae69d10?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    "https://img.freepik.com/free-photo/top-view-tasty-boiled-rice-with-beans-meat-inside-plate-dark-desk_179666-27241.jpg?w=740&t=st=1703585080~exp=1703585680~hmac=2f5dcf464e004c4847861982c4cf9a33520c5e8e1e6e16201b9b41cb826fdbf4",
+                    "https://img.freepik.com/free-photo/view-delicious-rice-meal-with-pisum-carrot-served-with-green-plate-cutlery-set-mixed-color-background-with-free-space_140725-160450.jpg?w=740&t=st=1703584906~exp=1703585506~hmac=f3c6ba0d52ba81fc1d6722aee2b1f0e4df48b2b5ec0860656187fd5c0917a08b"
+                ],
+                "product_Id":"CB2023-001",
+                "price": "Rs. 599",
+                "compared_price": "Rs. 899"
             }
         ]
 }

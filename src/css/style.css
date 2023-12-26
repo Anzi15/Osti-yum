@@ -21,6 +21,7 @@ body {
 }
 
 nav {
+  max-width: 100vw;
   padding: 2.3rem 4rem;
   display: flex;
   width: 90vw;

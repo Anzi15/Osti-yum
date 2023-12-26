@@ -1,4 +1,17 @@
 let stored_product_id = getParameter("Id");
+const product_Section = document.getElementById('product_section');
+const product_segments = {
+    "title": document.getElementById('product_title'),
+    "image": {
+       bigImg: document.getElementById('big_img'),
+       short_imgs: document.querySelectorAll('.short_imgs button img')
+
+    }
+    ,
+    "compared_price": document.getElementById('compared_price'),
+    "price": document.getElementById('price'),
+    "description": document.getElementById('product_description')
+}
 
 if(stored_product_id ==null || stored_product_id == undefined){
     setParameter("Id",localStorage.getItem("current_product_id"))
@@ -54,7 +67,13 @@ function sendToHomePage(){
     window.location = window.location.origin;
 }
 const loadProduct = function(product){
-    console.warn(product)
+   product_segments.title.innerText = product.title;
+   product_segments.description.innerText = product.description;
+   product_segments.compared_price.innerText = product.compared_price;
+   product_segments.price.innerText = product.price;
+   product_segments.image.bigImg.src = product.image[0];
+   product_segments.image.short_imgs[0].src = product.image[1];
+   product_segments.image.short_imgs[1].src = product.image[2];
 }
 getProductId()
 fecther()

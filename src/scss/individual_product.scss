@@ -39,14 +39,14 @@
                 gap: 0 
                 .7rem;
                 img{
-                    width: 98% !important;
+                    width: 100% !important;
                     margin: .7rem 0;
                 }
             }
         }
     }
     .text-area-container{
-        margin: 1rem;
+        margin: 1rem 0;
         max-width: 50%;
         display: flex;
         justify-content: center;
@@ -110,6 +110,7 @@
                 }
             }
             .product_description{
+                margin: 1rem 0;
                 line-height: 1.4rem;
                 word-spacing: .01rem;
                 letter-spacing: 0.01rem;
@@ -162,11 +163,13 @@
         flex-wrap: wrap;
         display: flex;
         justify-content: center !important;
-        padding: 1rem;
+        padding: 0 !important;
         .img_group,.text-area-container{
             width: 100%;
         }
         .img_group{
+            display: flex;
+            justify-content: center;
             ul{
                 width: 95%;
             }
@@ -174,9 +177,11 @@
         }
         .text-area-container{
             margin: 0;
+            display: flex;
+            justify-content: center;
             max-width: 100%;
             .text-area{
-                width: 100%;
+                width: 95%;
                 .individual-cta-btn{
                     width: 100%;
                     display: flex;
