@@ -1,21 +1,31 @@
 const quantityInput = document.getElementById('quantity-inp');
 const qttyPlusBtn = document.getElementById('qtty-pls-btn');
 const qttyMinusBtn = document.getElementById('qtty-mns-btn');
+const product_imgs_btn = document.querySelectorAll(".product_imgs")
 
-function img_modal(){
-    this.classlist.toggle("full-screen")
+product_imgs_btn.forEach(elem =>{
+    elem.addEventListener("click",()=>{
+        img_modal(elem)
+    })
+})
+
+function img_modal(elem){
+    if(elem){
+        console.log(``,elem.classList)
+        elem.classList.toggle("full-screen")
+    }
+    // elem.classlist.add("full-screen")
 }
 
 const plusOne = function(elem){
     const elemValue = parseInt(elem.value);
-    console.log(typeof(elem.value))
     elem.value = elemValue + 1;
 }
 const minusOne = function(elem){
     const elemValue = parseInt(elem.value);
     elem.value = elemValue + 1;
 }
-function quantityUpdater(elem,action){
+const quantityUpdater = function(elem,action){
     action(elem)
 }
 

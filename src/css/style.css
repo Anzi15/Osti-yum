@@ -60,7 +60,7 @@ nav .nav-toggler {
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 780px) {
   .nav-links {
     display: none;
   }
@@ -154,7 +154,7 @@ section {
 }
 
 .sec-1 {
-  height: 75vh;
+  min-height: 75vh !important;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -183,7 +183,7 @@ section {
   width: 100%;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 780px) {
   .sec-1 {
     height: 100vh;
     flex-wrap: wrap;

@@ -59,7 +59,7 @@ nav{
     }
 }
 
-@media (max-width:$breakpoint-tablet) {
+@media (max-width:$breakpoint-small-tablet) {
     .nav-links{
         display: none;
 
@@ -157,7 +157,7 @@ section{
 }
 //section 1
 .sec-1{
-    height: 75vh;
+    min-height: 75vh !important;
     display: flex;
     align-items: center;
     overflow: hidden;

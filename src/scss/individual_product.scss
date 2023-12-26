@@ -3,7 +3,7 @@
     display: flex;
     padding: 1rem;
 
-    .crousel{
+    .img_group{
         ul{
             width: 50vw;
             button{
@@ -17,6 +17,18 @@
                         width: 50%;
                     }
                 }
+            }
+            .full-screen{
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                right: 0;
+                z-index: 1000;
+                background: $color-bg;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
             #big_img{
                 width: 100% !important;
@@ -46,6 +58,7 @@
                 word-spacing: .3rem;
                 line-height: 3rem;
                 margin: 2rem 0 ;
+                max-width: 95%;
             }
             .price_con{
                 margin: 2rem .5rem;
@@ -109,6 +122,7 @@
                     display: flex;
                     height: 3rem;
                     width: 35%;
+                    min-width: 7rem;
                     border: 1.5px solid $color-dark;
                     margin: 0;
                     
@@ -140,6 +154,46 @@
                     }
                 }
             }
+        }
+    }
+}
+@media (max-width:$breakpoint-small-tablet) {
+    .product_section{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center !important;
+        padding: 1rem;
+        .img_group,.text-area-container{
+            width: 100%;
+        }
+        .img_group{
+            ul{
+                width: 95%;
+            }
+            margin: 1rem;
+        }
+        .text-area-container{
+            margin: 0;
+            max-width: 100%;
+            .text-area{
+                width: 100%;
+                .individual-cta-btn{
+                    width: 100%;
+                    display: flex;
+                    button{
+                        width: 90%;
+                    }
+                }
+                .des-con{
+                    .des-heading{
+                        margin: 1rem 0;
+                    }
+                    .product_description{
+                        max-width: 94%;
+                    }
+                }
+            }
+
         }
     }
 }
