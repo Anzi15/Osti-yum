@@ -14,6 +14,10 @@ body{
 .none{
     display: none;
 }
+a[role="not_link"]{
+    color: $color-dark;
+    text-decoration: none;
+}
 // navbar
 nav{
     max-width: 100vw;

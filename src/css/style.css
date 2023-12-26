@@ -20,6 +20,11 @@ body {
   display: none;
 }
 
+a[role=not_link] {
+  color: #1b1b1b;
+  text-decoration: none;
+}
+
 nav {
   max-width: 100vw;
   padding: 2.3rem 4rem;
