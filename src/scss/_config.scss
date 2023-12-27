@@ -3,6 +3,7 @@ $color-bg: #F3F3F3;
 $color-dark: #1b1b1b;
 $color-primary: #F79F1A;
 $color-dark-green: hsla(169, 100%, 16%, 1);
+$color-light-reen: rgb(113, 199, 184);
 $color-light-green: hsla(169, 100%, 26%, 1);
 $color-ultra-light-green: hsla(169, 70%, 95%, 1);
 $color-sky-blue: #C6E0FF;
@@ -20,4 +21,8 @@ $breakpoint-mobile: 570px;
 
 li{
     list-style-type: none;
+}
+*{
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
 }
