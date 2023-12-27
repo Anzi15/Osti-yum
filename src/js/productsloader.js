@@ -1,6 +1,5 @@
 const speacialitites_con = document.getElementById('speacialities_container'); 
 const hostOrigin = window.location.origin;
-const cart_items = localStorage.getItem("cart_items");
 async function fecther(){
     await fetch('../src/json/products.json')
     .then(response => response.json())
@@ -17,8 +16,6 @@ const loader = (elem,data)=>{
     let data_description_ultered ;
     if(data.description.length>120){
         data_description_ultered =data.description.split(0,80);
-
-        console.log(data_description_ultered)
     }
     elem.innerHTML += `<div class="product">
     <div class="img">
@@ -46,24 +43,22 @@ function setLocalStorage(product_Id) {
 }
 
 function addToCart(product_Id){
+const cart_items = localStorage.getItem("cart_items");
     
     if(cart_items !== null){
         let current_cart_items = JSON.parse(cart_items);
         if(!current_cart_items.includes(product_Id)){
-            console.log(``,current_cart_items)
-            let updated_cart_items = [...current_cart_items];
-            updated_cart_items.push(product_Id);
-            updated_cart_items = JSON.stringify(updated_cart_items);
-            console.log(``,updated_cart_items)
-            localStorage.setItem("cart_items",updated_cart_items)
+            
+            current_cart_items.push(product_Id);
+            current_cart_items = JSON.stringify(current_cart_items);
+            localStorage.setItem("cart_items",current_cart_items)
 
         }
     }else if(cart_items == null){
-        alert('else execu')
         let new_cart_items = [product_Id];
-        const new_updated_cart_items = JSON.stringify(new_cart_items);
+        const new_current_cart_items = JSON.stringify(new_cart_items);
 
-        localStorage.setItem("cart_items",new_updated_cart_items);
+        localStorage.setItem("cart_items",new_current_cart_items);
     }
 }
 fecther()
