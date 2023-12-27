@@ -1,5 +1,6 @@
 const speacialitites_con = document.getElementById('speacialities_container'); 
 const hostOrigin = window.location.origin;
+const cart_items = localStorage.getItem("cart_items");
 async function fecther(){
     await fetch('../src/json/products.json')
     .then(response => response.json())
@@ -32,9 +33,9 @@ const loader = (elem,data)=>{
      <a href="${window.location.origin}/product" onclick="setLocalStorage('${data.product_Id}')">
          Buy now
      </a>
-     <a onclick="addToCart('${data.product_Id}')">
+     <button onclick="addToCart('${data.product_Id}')">
          Add to cart
-     </a>
+     </button>
  </div>
 </div>`
 
@@ -45,7 +46,24 @@ function setLocalStorage(product_Id) {
 }
 
 function addToCart(product_Id){
-    alert(`${product_Id} successfully added to cart`)
-}
+    
+    if(cart_items !== null){
+        let current_cart_items = JSON.parse(cart_items);
+        if(!current_cart_items.includes(product_Id)){
+            console.log(``,current_cart_items)
+            let updated_cart_items = [...current_cart_items];
+            updated_cart_items.push(product_Id);
+            updated_cart_items = JSON.stringify(updated_cart_items);
+            console.log(``,updated_cart_items)
+            localStorage.setItem("cart_items",updated_cart_items)
 
+        }
+    }else if(cart_items == null){
+        alert('else execu')
+        let new_cart_items = [product_Id];
+        const new_updated_cart_items = JSON.stringify(new_cart_items);
+
+        localStorage.setItem("cart_items",new_updated_cart_items);
+    }
+}
 fecther()
