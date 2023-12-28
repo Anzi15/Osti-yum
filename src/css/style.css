@@ -3,6 +3,11 @@ li {
 }
 
 * {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+* {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -17,7 +22,7 @@ body {
 }
 
 .none {
-  display: none;
+  display: none !important;
 }
 
 a[role=not_link] {

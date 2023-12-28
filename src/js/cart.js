@@ -1,16 +1,18 @@
 const cart_items = localStorage.getItem("cart_items");
+const empty_cart_sec = document.getElementById('empty_cart_sec');
 
-const cartStatus = function(cartItems){
-    if(!cartItems){
-        "m"
-    }else{
-        loadCartItems()
-    }
+const cartEmpty = function(cartItems){
+  return cartItems == null ?   true : false;
 }
 
 const loadCartItems = function(cartItems){
     
 }
 
+function cartEmptyUpdater(cart_section){
+    if(!cartEmpty(cart_items)){
+        cart_section.classList.add("none")
+    }
+}
 
-cartStatus(cart_items)
+cartEmptyUpdater(empty_cart_sec)

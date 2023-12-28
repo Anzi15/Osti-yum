@@ -7,38 +7,39 @@ li {
   overflow-x: hidden !important;
 }
 
-.cart_sec {
+.empty_cart_sec {
   max-width: 100vw !important;
   min-height: 70vh;
   display: flex;
   justify-content: center;
 }
-.cart_sec .empty-cart {
+.empty_cart_sec .empty-cart {
   width: 100%;
   height: 70%;
 }
-.cart_sec .empty-cart .cart-illustration {
+.empty_cart_sec .empty-cart .cart-illustration {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.cart_sec .empty-cart .cart-illustration img {
+.empty_cart_sec .empty-cart .cart-illustration img {
+  min-height: 30vh;
   width: 90%;
   max-width: 20rem !important;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
-.cart_sec .empty-cart h1 {
+.empty_cart_sec .empty-cart h1 {
   font-weight: 400;
   text-align: center;
   margin: 1.5rem 0;
 }
-.cart_sec .empty-cart .cart-cta-btn {
+.empty_cart_sec .empty-cart .cart-cta-btn {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.cart_sec .empty-cart .cart-cta-btn button, .cart_sec .empty-cart .cart-cta-btn a {
+.empty_cart_sec .empty-cart .cart-cta-btn button, .empty_cart_sec .empty-cart .cart-cta-btn a {
   border: none;
   padding: 0.75em 2.2em;
   border-radius: 0.25em;
@@ -46,17 +47,17 @@ li {
   font-size: 1.1em;
   font-weight: 700;
 }
-.cart_sec .empty-cart .cart-cta-btn button:first-child, .cart_sec .empty-cart .cart-cta-btn a:first-child {
+.empty_cart_sec .empty-cart .cart-cta-btn button:first-child, .empty_cart_sec .empty-cart .cart-cta-btn a:first-child {
   text-decoration: none;
   color: #1b1b1b;
   background: none;
   border: 2px solid #1b1b1b;
 }
-.cart_sec .empty-cart .cart-cta-btn button:first-child:hover, .cart_sec .empty-cart .cart-cta-btn a:first-child:hover {
+.empty_cart_sec .empty-cart .cart-cta-btn button:first-child:hover, .empty_cart_sec .empty-cart .cart-cta-btn a:first-child:hover {
   background-color: #1b1b1b;
   color: #F3F3F3;
 }
-.cart_sec .empty-cart .cart-cta-btn button:first-child:active, .cart_sec .empty-cart .cart-cta-btn a:first-child:active {
+.empty_cart_sec .empty-cart .cart-cta-btn button:first-child:active, .empty_cart_sec .empty-cart .cart-cta-btn a:first-child:active {
   outline: 0.125em solid #1b1b1b;
   outline-offset: 0.25em;
 }

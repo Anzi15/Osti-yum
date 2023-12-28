@@ -12,7 +12,7 @@ body{
     overflow-x: hidden;
 }
 .none{
-    display: none;
+    display: none !important;
 }
 a[role="not_link"]{
     color: $color-dark;
