@@ -150,6 +150,10 @@ nav .nav-toggler {
   outline-offset: 0.25em;
 }
 
+.grey-line {
+  border-top: 1px solid #121212 !important;
+}
+
 .title-heading {
   margin: 3.5rem 0;
   font-size: 2rem;

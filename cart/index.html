@@ -49,17 +49,32 @@
     </nav>
 
     <section class="cart_sec">
-        <div class="empty-cart" id="empty_cart_sec">
-            <div class="cart-illustration">
-                <img src="../src/assets/Groupcart.svg" alt="" class="illustration" draggable="false" >
-            </div>
+        <div class="empty-cart none" id="empty_cart_sec">
 
-            <div class="textarea">
-                <h1>Your cart is empty 📪</h1>
+        </div>
 
-                <div class="cart-cta-btn">
+        <div class="product-cart" id="product-cart">
+            <div class="cart-header">
+                <div class="heading">
+                    <h1>Your cart</h1>
+
                     <a href="../catalog/">Continue shopping</a>
                 </div>
+
+                <div class="cart-table-header">
+                    <div class="cart-table-column">
+                        <p>Product</p> 
+                    </div>
+
+                    <div class="cart-table-column">
+                        <p>Quantity</p>
+                    </div>
+
+                    <div class="cart-table-column">
+                        <p>Price</p>
+                    </div>
+                </div>
+                <hr class="grey-line">
             </div>
         </div>
     </section>

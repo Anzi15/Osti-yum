@@ -7,39 +7,43 @@ li {
   overflow-x: hidden !important;
 }
 
-.empty_cart_sec {
+hr.grey-line {
+  border-top: 1px solid grey !important;
+}
+
+.cart_sec {
   max-width: 100vw !important;
   min-height: 70vh;
   display: flex;
   justify-content: center;
 }
-.empty_cart_sec .empty-cart {
+.cart_sec .empty-cart {
   width: 100%;
   height: 70%;
 }
-.empty_cart_sec .empty-cart .cart-illustration {
+.cart_sec .empty-cart .cart-illustration {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.empty_cart_sec .empty-cart .cart-illustration img {
+.cart_sec .empty-cart .cart-illustration img {
   min-height: 30vh;
   width: 90%;
   max-width: 20rem !important;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
-.empty_cart_sec .empty-cart h1 {
+.cart_sec .empty-cart h1 {
   font-weight: 400;
   text-align: center;
   margin: 1.5rem 0;
 }
-.empty_cart_sec .empty-cart .cart-cta-btn {
+.cart_sec .empty-cart .cart-cta-btn {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.empty_cart_sec .empty-cart .cart-cta-btn button, .empty_cart_sec .empty-cart .cart-cta-btn a {
+.cart_sec .empty-cart .cart-cta-btn button, .cart_sec .empty-cart .cart-cta-btn a {
   border: none;
   padding: 0.75em 2.2em;
   border-radius: 0.25em;
@@ -47,19 +51,55 @@ li {
   font-size: 1.1em;
   font-weight: 700;
 }
-.empty_cart_sec .empty-cart .cart-cta-btn button:first-child, .empty_cart_sec .empty-cart .cart-cta-btn a:first-child {
+.cart_sec .empty-cart .cart-cta-btn button:first-child, .cart_sec .empty-cart .cart-cta-btn a:first-child {
   text-decoration: none;
   color: #1b1b1b;
   background: none;
   border: 2px solid #1b1b1b;
 }
-.empty_cart_sec .empty-cart .cart-cta-btn button:first-child:hover, .empty_cart_sec .empty-cart .cart-cta-btn a:first-child:hover {
+.cart_sec .empty-cart .cart-cta-btn button:first-child:hover, .cart_sec .empty-cart .cart-cta-btn a:first-child:hover {
   background-color: #1b1b1b;
   color: #F3F3F3;
 }
-.empty_cart_sec .empty-cart .cart-cta-btn button:first-child:active, .empty_cart_sec .empty-cart .cart-cta-btn a:first-child:active {
+.cart_sec .empty-cart .cart-cta-btn button:first-child:active, .cart_sec .empty-cart .cart-cta-btn a:first-child:active {
   outline: 0.125em solid #1b1b1b;
   outline-offset: 0.25em;
+}
+.cart_sec .product-cart {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cart_sec .product-cart .cart-header {
+  width: 80%;
+}
+.cart_sec .product-cart .cart-header .heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+}
+.cart_sec .product-cart .cart-header .heading h1 {
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+}
+.cart_sec .product-cart .cart-header .heading a {
+  color: hsl(169, 100%, 16%);
+}
+.cart_sec .product-cart .cart-header .cart-table-header {
+  width: 100%;
+  display: flex;
+  justify-content: center !important;
+  margin: 0 0 0.5rem 0;
+}
+.cart_sec .product-cart .cart-header .cart-table-header .cart-table-column {
+  color: grey;
+  width: 40% !important;
+  display: flex;
+  justify-content: center;
+}
+.cart_sec .product-cart .cart-header .cart-table-header :first-child {
+  justify-content: left !important;
 }
 
 /*# sourceMappingURL=cart.css.map */
