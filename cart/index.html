@@ -10,6 +10,7 @@
 
     <script defer src="../src/js/cart.js"></script>
     <script defer src="../src/js/script.js"></script>
+    <script defer src="../src/js/individual_product.js"></script>
 </head>
 <body>
     <nav>
@@ -53,7 +54,7 @@
 
         </div>
 
-        <div class="product-cart" id="product-cart">
+        <div class="cart-header-con" id="product-cart">
             <div class="cart-header">
                 <div class="heading">
                     <h1>Your cart</h1>
@@ -67,7 +68,7 @@
                     </div>
 
                     <div class="cart-table-column">
-                        <p>Quantity</p>
+                        <p class="quantity-column">Quantity</p>
                     </div>
 
                     <div class="cart-table-column">
@@ -75,6 +76,57 @@
                     </div>
                 </div>
                 <hr class="grey-line">
+            </div>               
+            <div class="cart-product">
+                <div class="all-product-data">
+                    <div class="product_img">
+                        <img src="https://images.unsplash.com/photo-1603496987351-f84a3ba5ec85?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                    </div>
+        
+                    <div class="product-data">
+                        <h4 class="product-title">Chicken karahi</h4>
+                        <p class="product_price">Rs. 100</p>
+                        
+                        <div class="product-quantity">
+                            <div class="quantity-con">
+                                <quantity-input class="quantity">
+                                    <button id="qtty-mns-btn">-</button>
+                                    <input type="number" value="1" name="" id="quantity-inp">
+                                    <button id="qtty-pls-btn">+</button>
+                                </quantity-inp>
+        
+                            </div>
+                            <div class="product-remove-con">
+        
+                                <div class="product-remove-btn">
+                                    <img src="../src/assets/trash.svg" alt="" class="trash-icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="product-quantity">
+                    <div class="quantity-con">
+                        <quantity-input class="quantity">
+                            <button id="qtty-mns-btn">-</button>
+                            <input type="number" value="1" name="" id="quantity-inp">
+                            <button id="qtty-pls-btn">+</button>
+                        </quantity-inp>
+
+                    </div>
+                    <div class="product-remove-con">
+
+                        <div class="product-remove-btn">
+                            <img src="../src/assets/trash.svg" alt="" class="trash-icon">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-price">
+                    <p>Rs. 100</p>
+                </div>
             </div>
         </div>
     </section>

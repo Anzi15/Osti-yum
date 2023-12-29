@@ -23,7 +23,9 @@ const plusOne = function(elem){
 }
 const minusOne = function(elem){
     const elemValue = parseInt(elem.value);
-    elem.value = elemValue + 1;
+    if(elemValue > 1){
+        elem.value = elemValue - 1;
+    }
 }
 const quantityUpdater = function(elem,action){
     action(elem)
