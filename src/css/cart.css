@@ -217,6 +217,9 @@ hr.grey-line {
   }
 }
 @media (max-width: 340px) {
+  .product_img img {
+    padding: 1rem 0;
+  }
   .product-quantity {
     flex-wrap: wrap;
   }

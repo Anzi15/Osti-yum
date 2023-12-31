@@ -219,6 +219,11 @@ hr.grey-line{
     }
 }
 @media (max-width:$breakpoint-small-mob) {
+    .product_img{
+        img{
+            padding: 1rem 0;
+        }
+    }
     .product-quantity{
         flex-wrap: wrap;
     }
