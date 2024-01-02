@@ -12,11 +12,73 @@ const cartEmpty = function(cartItems){
   return cartItems == null ?   true : false;
 }
 
+const loadProduct = function(product){
+    cart_product.innerHTML += `            <div class="cart-product">
+    <div class="all-product-data">
+        <div class="product_img">
+            <img src="${product.image[0]}" alt="${product.title}">
+        </div>
+
+        <div class="product-data">
+            <h4 class="product-title">${product.title}</h4>
+            <p class="product_price">Rs. 100</p>
+            
+            <div class="product-quantity">
+                <div class="quantity-con">
+                    <quantity-input class="quantity">
+                        <button onclick="quantityUpdater('qtty-inp-${product.product_Id}',minusOne)" class="qtty-mns-btn">-</button>
+
+                        <input onchange="valueLimiter('qtty-inp-${product.product_Id}')"  id="qtty-inp-${product.product_Id}" type="number" value="1" name="" class="quantity-inp">
+
+                        <button onclick="quantityUpdater('qtty-inp-${product.product_Id}',plusOne)" class="qtty-pls-btn">+</button>
+                    </quantity-inp>
+
+                </div>
+                <div class="product-remove-con">
+
+                    <div class="product-remove-btn">
+                        <img src="../src/assets/trash.svg" alt="" class="trash-icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="product-quantity">
+        <div class="quantity-con">
+            <quantity-input class="quantity">
+
+                <button onclick="quantityUpdater('qtty-inp-${product.product_Id}',minusOne)" class="qtty-mns-btn">-</button>
+
+                <input onchange="valueLimiter('qtty-inp-${product.product_Id}')" id="qtty-inp-${product.product_Id}" type="number" value="1" name="" class="quantity-inp">
+
+                <button onclick="quantityUpdater('qtty-inp-${product.product_Id}',plusOne)"
+                class="qtty-pls-btn">+</button>
+            </quantity-inp>
+
+        </div>
+        <div class="product-remove-con">
+
+            <div class="product-remove-btn">
+                <img src="../src/assets/trash.svg" alt="" class="trash-icon">
+            </div>
+        </div>
+    </div>
+
+    <div class="product-price">
+        <p>Rs. 100</p>
+    </div>
+</div>`
+}
+
 const filterCartItems = function(cartItems,data){
-    const cart_items_Arr = JSON.parse(cartItems)
-    console.log(``,data,cart_items_Arr)
-    cart_items_Arr.forEach(item => {
-        
+    const cartItemsArr = JSON.parse(cartItems)
+    console.log(``,data.all_products)
+    data.all_products.forEach(item => {
+        if(cartItemsArr.includes(item.product_Id) ){
+            loadProduct(item)
+        }
     });
 }
 

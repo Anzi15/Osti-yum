@@ -1,6 +1,6 @@
-const quantityInput = document.querySelectorAll('#quantity-inp');
-const qttyPlusBtn = document.querySelectorAll('#qtty-pls-btn');
-const qttyMinusBtn = document.querySelectorAll('#qtty-mns-btn');
+const quantityInput = document.querySelectorAll('.quantity-inp');
+const qttyPlusBtn = document.querySelectorAll('.qtty-pls-btn');
+const qttyMinusBtn = document.querySelectorAll('.qtty-mns-btn');
 const product_imgs_btn = document.querySelectorAll(".product_imgs")
 
 product_imgs_btn.forEach(elem =>{
@@ -15,44 +15,30 @@ function img_modal(elem){
     }
 }
 
-const plusOne = function(elem){
-    elem.forEach(element=>{
-        const elemValue = parseInt(element.value);
-        element.value = elemValue + 1;
-    })
+const plusOne = function(elemId){
+    const bothInp = document.querySelectorAll(`#${elemId}`)
+    for(let i=0; i<bothInp.length; i++){
+        const currentValue = parseInt(bothInp[i].value);
+        bothInp[i].value = currentValue +1;
+    }
 }
-const minusOne = function(elem){
-    elem.forEach(element=>{
-        const elemValue = parseInt(element.value);
-        if(elemValue > 1){
-            element.value = elemValue - 1;
+const minusOne = function(elemId){
+    const bothInp = document.querySelectorAll(`#${elemId}`)
+    for(let i=0; i<bothInp.length; i++){
+        const currentValue = bothInp[i].value;
+        if(currentValue>1){
+            bothInp[i].value = currentValue - 1;
+        }
+    }
+}
+const quantityUpdater = function(elemId,action){
+    action(elemId)
+}
+const valueLimiter = function(elemId){
+    const elem = document.querySelectorAll(`#${elemId}`);
+    elem.forEach(elem =>{
+        if(elem.value<1){
+            elem.value = 1;
         }
     })
 }
-const quantityUpdater = function(elem,action){
-    action(elem)
-}
-
-//not letting quantity go below 1
-
-quantityInput.forEach(element => {
-    element.addEventListener("change",()=>{
-        if(element.value < 1){
-            element.value = 1
-        }
-    })
-});
-
-
-//updating the quantity respectively
-qttyMinusBtn.forEach(element =>{
-    element.addEventListener("click",()=>{
-        quantityUpdater(quantityInput,minusOne)
-}) 
-})
-
-qttyPlusBtn.forEach(element => {
-    element.addEventListener("click",()=>{
-        quantityUpdater(quantityInput,plusOne)
-    })
-}); 
