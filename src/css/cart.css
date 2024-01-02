@@ -205,7 +205,7 @@ li {
   justify-content: center;
 }
 .cart_sec .cart-header-con .cart-footer .cart-ftr-data .price h1, .cart_sec .products-con .cart-footer .cart-ftr-data .price h1 {
-  margin: 0.7rem 0;
+  margin: 1rem 0;
 }
 .cart_sec .cart-header-con .cart-footer .check-out-btn, .cart_sec .products-con .cart-footer .check-out-btn {
   margin: 2.5rem 0;

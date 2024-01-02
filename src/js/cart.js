@@ -21,7 +21,7 @@ const loadProduct = function(product){
 
         <div class="product-data">
             <h4 class="product-title">${product.title}</h4>
-            <p class="product_price">Rs. 100</p>
+            <p class="product_price">${product.price}</p>
             
             <div class="product-quantity">
                 <div class="quantity-con">
@@ -67,7 +67,7 @@ const loadProduct = function(product){
     </div>
 
     <div class="product-price">
-        <p>Rs. 100</p>
+        <p>${product.price}</p>
     </div>
 </div>`
 }
