@@ -2,10 +2,10 @@ const cart_items = localStorage.getItem("cart_items");
 const empty_cart_sec = document.getElementById('empty_cart_sec');
 const cart_product = document.getElementById('product-cart');
 
-async function fecther(){
+async function fecther(cartItems,action,inpValue=null){
     await fetch('../src/json/products.json')
     .then(response => response.json())
-    .then(data => filterCartItems(cart_items,data));
+    .then(data => filterCartItems(cartItems,data,action,inpValue));
 }
 
 const cartEmpty = function(cartItems){
@@ -26,11 +26,11 @@ const loadProduct = function(product){
             <div class="product-quantity">
                 <div class="quantity-con">
                     <quantity-input class="quantity">
-                        <button onclick="quantityUpdater('qtty-inp-${product.product_Id}',minusOne)" class="qtty-mns-btn">-</button>
+                        <button onclick="quantityUpdater('qtty-inp_${product.product_Id}',minusOne)" class="qtty-mns-btn">-</button>
 
-                        <input onchange="valueLimiter('qtty-inp-${product.product_Id}')"  id="qtty-inp-${product.product_Id}" type="number" value="1" name="" class="quantity-inp">
+                        <input onchange="valueLimiter('qtty-inp_${product.product_Id}')"  id="qtty-inp_${product.product_Id}" type="number" value="1" name="" class="quantity-inp">
 
-                        <button onclick="quantityUpdater('qtty-inp-${product.product_Id}',plusOne)" class="qtty-pls-btn">+</button>
+                        <button onclick="quantityUpdater('qtty-inp_${product.product_Id}',plusOne)" class="qtty-pls-btn">+</button>
                     </quantity-inp>
 
                 </div>
@@ -49,11 +49,11 @@ const loadProduct = function(product){
         <div class="quantity-con">
             <quantity-input class="quantity">
 
-                <button onclick="quantityUpdater('qtty-inp-${product.product_Id}',minusOne)" class="qtty-mns-btn">-</button>
+                <button onclick="quantityUpdater('qtty-inp_${product.product_Id}',minusOne)" class="qtty-mns-btn">-</button>
 
-                <input onchange="valueLimiter('qtty-inp-${product.product_Id}')" id="qtty-inp-${product.product_Id}" type="number" value="1" name="" class="quantity-inp">
+                <input onchange="valueLimiter('qtty-inp_${product.product_Id}')" id="qtty-inp_${product.product_Id}" type="number" value="1" name="" class="quantity-inp">
 
-                <button onclick="quantityUpdater('qtty-inp-${product.product_Id}',plusOne)"
+                <button onclick="quantityUpdater('qtty-inp_${product.product_Id}',plusOne)"
                 class="qtty-pls-btn">+</button>
             </quantity-inp>
 
@@ -67,17 +67,21 @@ const loadProduct = function(product){
     </div>
 
     <div class="product-price">
-        <p>${product.price}</p>
+        <p id="price-${product.product_Id}">${product.price}</p>
     </div>
 </div>`
 }
 
-const filterCartItems = function(cartItems,data){
-    const cartItemsArr = JSON.parse(cartItems)
-    console.log(``,data.all_products)
+const filterCartItems = function(cartItems,data,action,inpValue){
+    
+    const cartItemsArr = typeof(cartItems) == "string" ? JSON.parse(cartItems) : cartItems
     data.all_products.forEach(item => {
         if(cartItemsArr.includes(item.product_Id) ){
-            loadProduct(item)
+           if(action ==loadProduct){
+            action(item)
+           }else{
+            action(inpValue,item.price,item.product_Id)
+           }
         }
     });
 }
@@ -98,7 +102,7 @@ function cartEmptyUpdater(cart_section){
         </div>
     </div>`
     }else{
-        fecther()
+        fecther(cart_items,loadProduct)
     }
 }
 

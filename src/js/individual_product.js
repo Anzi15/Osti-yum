@@ -14,24 +14,15 @@ function img_modal(elem){
         elem.classList.toggle("full-screen")
     }
 }
-const priceWriter = function(parentElem,value){
-    if(parentElem.childNodes[1] == document.querySelector("#product-cart > div:nth-child(1) > div.all-product-data > div.product-data > h4")){
-        const productPriceElem = parentElem.parentElement.parentElement.childNodes[5].childNodes[1];
-        
-        productPriceElem
-        console.log(``,productPriceElem.innerText)
-    }else{
-
-        console.log(``,parentElem)
-    }
+const priceLoader = function(inpValue, productPrice, elemId){
+    const priceElem = document.getElementById(`price-${elemId}`);
+    const product_Price = parseInt(productPrice.split("$")[1])
+    priceElem.innerHTML = `$${eval(inpValue * product_Price)}`  
 }
-
 const priceUpdater = function(elemId){
-    const bothInp = document.querySelectorAll(`#${elemId}`)
-    for(let i =0; i<bothInp.length; i++){
-        let itsProduct = bothInp[i].parentElement.parentElement.parentElement.parentElement;
-        priceWriter(itsProduct,bothInp.value)
-    }
+    const inpValue = parseInt(document.getElementById(`${elemId}`).value)
+    const splitedId = [elemId.split("_")[1]];
+    fecther(splitedId,priceLoader,inpValue)
 }
 const plusOne = function(elemId){
     const bothInp = document.querySelectorAll(`#${elemId}`)
