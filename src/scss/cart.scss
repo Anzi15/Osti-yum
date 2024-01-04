@@ -100,23 +100,21 @@
             justify-content: space-between;
             width: 80%;
             .all-product-data{
-                width: 35%;
+                width: 65%;
                 display: flex;
                 justify-content: left;
-
+                
                 .product-data{
                     display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    width: 50%;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 90%;
                     gap: .3rem;
 
-                    .product-quantity{
-                        display: none;
-                    }
                 }
                 .product_img{
                     width: 50%;
+                    min-width: 9rem;
                     img{
                         width: 80%;
                         aspect-ratio: 1/1;
@@ -127,7 +125,8 @@
             .product-quantity{
                 display: flex;
                 width: 20%;
-                min-width: 7rem;
+                min-width: 10rem;
+                
                 .product-remove-con{
                     padding: 1.5rem 0;
 
@@ -144,15 +143,14 @@
             }
 
                 .quantity-con{
+                    max-width: 6.5rem !important;
                     padding: 1rem 0;
                     quantity-input{
-                        margin: 1rem 0;
                         display: flex;
                         height: 3rem;
                         width: 35%;
                         min-width: 6rem;
                         border: 1.5px solid $color-dark;
-                        margin: 0;
                         
                         margin: .5rem 0;
                         button,input{
@@ -186,6 +184,9 @@
             .product-price{
                 width: 18%;
                 padding-top: 1.4rem;
+                display: flex;
+                height: 65%;
+                align-items: center;
             }
         }
         .cart-footer{
@@ -195,10 +196,10 @@
             .cart-ftr-data{
                 width: 100%;
                 display: flex;
+                flex-direction: row;
                 justify-content: space-between;
                 margin: 1rem 0;
                 .price{
-                    width: 20%;
                     justify-content: center;
                     h1{
                         margin: 1rem 0;
@@ -206,8 +207,6 @@
                 }
             }
             .check-out-btn{
-                margin: 2.5rem 0;
-                width: 95%;
                 display: flex;
                 justify-content: right;
 
@@ -234,27 +233,20 @@
     }
 }
 @media (max-width:$breakpoint-small-tablet) {
+    .quantity-column{
+        display: none;
+    }
     .cart-header,.cart-product{
         width: 90% !important;
     }
     .all-product-data{
-        width: 60% !important;
-    }
-    .quantity-column,.product-quantity{
-        display: none !important; 
+        width: 90% !important;
     }
     .all-product-data{
-        width: 80% !important;
         .product-data{
-            display: flex !important;
-            .product-quantity{
-                width: 100% !important;
-                display: flex !important;
-                .quantity-con{
-                    width: 60%;
-                    min-width: 6.5rem;
-                }
-            }
+            display: flex;
+            flex-direction: column;
+            align-items: normal !important;
         }
     }
     .product-price{
@@ -267,16 +259,16 @@
             padding: 1rem 0;
         }
     }
-    .product-quantity{
-        flex-wrap: wrap;
+    .product-price{
+        justify-content: center;
     }
     .quantity-con{
-        padding-bottom: 0 !important;
+        padding: 0;
+        .product-quantity{
+            flex-wrap: wrap;
+        }
     }
     .product-remove-con{
-        padding: 0 !important;
-        height: 3rem !important;
-        overflow-y: hidden;
         .product-remove-btn{
             height: 3rem;
         }

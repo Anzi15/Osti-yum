@@ -17,9 +17,11 @@ function img_modal(elem){
 const priceLoader = function(inpValue, productPrice, elemId){
     const priceElem = document.getElementById(`price-${elemId}`);
     const product_Price = parseInt(productPrice.split("$")[1])
-    priceElem.innerHTML = `$${eval(inpValue * product_Price)}`  
+    priceElem.innerHTML = `$${eval(inpValue * product_Price)}`
+    totalPriceUpdater(`$${eval(inpValue * product_Price)}`)
 }
 const priceUpdater = function(elemId){
+
     const inpValue = parseInt(document.getElementById(`${elemId}`).value)
     const splitedId = [elemId.split("_")[1]];
     fecther(splitedId,priceLoader,inpValue)
@@ -43,13 +45,16 @@ const minusOne = function(elemId){
 const quantityUpdater = function(elemId,action){
     action(elemId);
     priceUpdater(elemId);
+
 }
 const valueLimiter = function(elemId){
     const elem = document.querySelectorAll(`#${elemId}`);
+    
     elem.forEach(elem =>{
         if(elem.value<1){
             elem.value = 1;
         }
     })
+
     priceUpdater(elemId);
 }
