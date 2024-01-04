@@ -124,8 +124,7 @@
             }
             .product-quantity{
                 display: flex;
-                width: 20%;
-                min-width: 10rem;
+                width: 10rem;
                 
                 .product-remove-con{
                     padding: 1.5rem 0;
@@ -262,11 +261,22 @@
     .product-price{
         justify-content: center;
     }
-    .quantity-con{
-        padding: 0;
-        .product-quantity{
-            flex-wrap: wrap;
+    .product-quantity{
+        flex-direction: column;
+
+        .product-remove-con{
+            padding: 0 !important;
+            
+            .product-remove-btn{
+                height: 1.4rem !important;
+                img{
+                    margin: 0 !important;
+                }
+            }
         }
+    }
+    .quantity-con{
+        padding: 0 !important;
     }
     .product-remove-con{
         .product-remove-btn{
