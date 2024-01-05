@@ -26,7 +26,7 @@ const loader = (elem,data)=>{
      
  </div>
  <div class="cta-btn">
-     <a href="${window.location.origin}/?Id=${product_Id}" onclick="setLocalStorage('${data.product_Id}')">
+     <a href="${window.location.origin}/?Id=${data.product_Id}" onclick="setLocalStorage('${data.product_Id}')">
          Buy now
      </a>
      <button onclick="addToCart('${data.product_Id}')">
