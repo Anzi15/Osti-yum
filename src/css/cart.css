@@ -140,6 +140,8 @@ li {
   padding: 1.5rem 0;
 }
 .cart_sec .cart-header-con .cart-product .product-quantity .product-remove-con .product-remove-btn, .cart_sec .products-con .cart-product .product-quantity .product-remove-con .product-remove-btn {
+  background: none;
+  border: none;
   height: 4rem;
   min-width: 1.4rem;
   overflow-y: hidden;
@@ -233,7 +235,7 @@ li {
   .quantity-column {
     display: none;
   }
-  .cart-header, .cart-product {
+  .cart-header, .cart-product, .cart-footer {
     width: 90% !important;
   }
   .all-product-data {

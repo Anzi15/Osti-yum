@@ -130,6 +130,8 @@
                     padding: 1.5rem 0;
 
                 .product-remove-btn{
+                    background: none;
+                    border: none;
                     height: 4rem;
                     min-width: 1.4rem;
                     overflow-y: hidden;
@@ -235,7 +237,7 @@
     .quantity-column{
         display: none;
     }
-    .cart-header,.cart-product{
+    .cart-header,.cart-product,.cart-footer{
         width: 90% !important;
     }
     .all-product-data{

@@ -23,11 +23,10 @@ const loader = (elem,data)=>{
     </div>
     <div class="textarea">
     <h2>${data.title}</h2> 
-     <p>${data_description_ultered}</p>
      
  </div>
  <div class="cta-btn">
-     <a href="${window.location.origin}/product" onclick="setLocalStorage('${data.product_Id}')">
+     <a href="${window.location.origin}/?Id=${product_Id}" onclick="setLocalStorage('${data.product_Id}')">
          Buy now
      </a>
      <button onclick="addToCart('${data.product_Id}')">

@@ -18,7 +18,7 @@ const priceLoader = function(inpValue, productPrice, elemId){
     const priceElem = document.getElementById(`price-${elemId}`);
     const product_Price = parseInt(productPrice.split("$")[1])
     priceElem.innerHTML = `$${eval(inpValue * product_Price)}`
-    totalPriceUpdater(`$${eval(inpValue * product_Price)}`)
+    totalPriceUpdater()
 }
 const priceUpdater = function(elemId){
 
@@ -45,7 +45,6 @@ const minusOne = function(elemId){
 const quantityUpdater = function(elemId,action){
     action(elemId);
     priceUpdater(elemId);
-
 }
 const valueLimiter = function(elemId){
     const elem = document.querySelectorAll(`#${elemId}`);
