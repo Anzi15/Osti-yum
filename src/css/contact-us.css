@@ -63,6 +63,7 @@ li {
   height: 11rem;
 }
 .contact-us-sec .container .inp-feilds input[type=button] {
+  border: none !important;
   font-weight: 550;
   height: 3rem;
   background: hsl(169, 100%, 26%);
