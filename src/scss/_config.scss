@@ -9,6 +9,7 @@ $color-ultra-light-green: hsla(169, 70%, 95%, 1);
 $color-sky-blue: #C6E0FF;
 $color-dark-blue: #1A669C;
 $color-bisque: #FFC170;
+$color-grey: #1b1b1b;
 $color-light-grey: grey;
 
 //breakpoints 
@@ -30,4 +31,9 @@ li{
     button{
         cursor: pointer;
     }
+}
+.light-heading{
+
+        font-weight: 400;
+        letter-spacing: 0.03rem;
 }
