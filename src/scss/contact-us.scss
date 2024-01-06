@@ -28,7 +28,7 @@
             flex-direction: column;
             align-items: center;
 
-            input[type="text"],input[type="email"],textarea,input[type="button"]{
+            input[type="text"],input[type="email"],textarea,input[type="submit"]{
                 height: 2.2rem;
                 width: 85% !important;
                 border-radius: 1.5rem;
@@ -44,7 +44,7 @@
                 resize: none;
                 height: 11rem;
             }
-            input[type="button"]{
+            input[type="submit"]{
                 border: none !important;
                 font-weight: 550;
                 height: 3rem;

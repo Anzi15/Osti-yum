@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../src/css/style.css">
     <link rel="stylesheet" href="../src/css/contact-us.css">
     <script defer src="../src/js/script.js"></script>
+    <script defer src="../src/js/contact-us.js"></script>
 </head>
 <body>
     <nav>
@@ -45,7 +46,7 @@
         </div>
         
     </nav>
-
+        <div id="my-form-status"></div>
         <section class="contact-us-sec">
             <h1 class="light-heading cen">Have some questions?</h1>
             <p class="cen">Lorem ipsum dolor sit amet consectetur, </p>
@@ -54,12 +55,13 @@
                     <img src="../src/assets/message-page-food.jpg" alt="">
                 </div>
                 <div class="inp-feilds">
-                    <form action="">
+                    <form action="https://formspree.io/f/xgegedda"
+                    method="POST" id="form">
                         <input required placeholder="Your name" type="text" name="Name" id="name">
                         <input required placeholder="you@example.com" type="email" name="email" id="email">
                         <textarea required placeholder="Your message to our team" name="textarea" id="textarea" cols="30" rows="10"></textarea>
 
-                        <input type="button" value="Submit">
+                        <input type="submit" value="Submit">
                     </form>
                 </div>
             </div>
