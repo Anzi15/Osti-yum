@@ -21,9 +21,12 @@ window.onscroll = function(e) {
     nav.classList.remove("fixed-nav");
     navlink.classList.remove('visible-nav');
   } else {
-    if(oldScrollY>47){
+    if(oldScrollY>150){
         nav.classList.add("fixed-nav")
     }
+  }
+  if(scrollY < 20){
+    nav.classList.remove('fixed-nav');
   }
   oldScrollY = window.scrollY;
 }

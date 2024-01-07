@@ -1,6 +1,8 @@
 const form = document.getElementById("form");
 const modal = document.getElementById('modal-con');
 const closeModal = document.getElementById('x-close-modal');
+const modal_msg = document.getElementById('modal-msg');
+const modal_img = document.getElementById('modal-img');
 
 async function handleSubmit(event) {
   event.preventDefault();
@@ -20,7 +22,10 @@ async function handleSubmit(event) {
         if (Object.hasOwn(data, 'errors')) {
           (error => error["message"]).join(", ")
         } else {
-          alert("Oops! There was a problem submitting your form")
+            modal_img.src = `../src/assets/error-svgrepo-com.svg`
+            modal_msg.innerText = `Error occured`
+            modal.classList.add("grid")
+          
         }
       })
     }

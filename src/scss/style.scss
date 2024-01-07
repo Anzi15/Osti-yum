@@ -20,6 +20,46 @@ p{
     font-size: 1rem;
     line-height: 1.5rem;
 }
+.cta-btn{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    button,a{
+        border: none;
+        padding: 0.75em 2.2em;
+        border-radius: 0.25em;
+        margin: .3rem;
+        font-size: 1.1em;
+        font-weight: 700;
+        color: $color-dark;
+        text-decoration: none;
+
+     &:first-child{
+            text-decoration: none;
+            background: $color-light-green;
+            color: white ;
+            &:hover{
+                background: $color-dark-green;
+            }
+            &:focus{
+                outline: 0.125em solid $color-dark-green;
+                outline-offset: 0.25em;
+            }
+        }
+        &:nth-child(2){
+            background: none;
+            border: 2px solid $color-dark;
+            &:hover{
+                background-color: $color-dark;
+                color: $color-bg;
+            }
+            &:active{
+                outline: 0.125em solid $color-dark;
+                outline-offset: 0.25em;
+            }
+        }
+    }
+}
 .none{
     display: none !important;
 }
@@ -31,14 +71,13 @@ a[role="not_link"]{
 .fixed-nav{
     z-index: 999;
     overflow: visible !important;
-    transform: translateY(0);
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     background: white;
 }
-nav,dummy-nav-placeholder{
+nav{
     height: 2.6rem;
     max-width: 100vw;
     .nav-heading{
@@ -88,9 +127,6 @@ nav,dummy-nav-placeholder{
 }
 
 @media (max-width:$breakpoint-small-tablet) {
-    nav{
-        transform: translateY(-100%);
-    }
     .nav-links{
         display: none;
 
@@ -132,44 +168,7 @@ nav,dummy-nav-placeholder{
     display: block !important;
     z-index: 999;
 }
-.cta-btn{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    button,a{
-        border: none;
-        padding: 0.75em 2.2em;
-        border-radius: 0.25em;
-        margin: .3rem;
-        font-size: 1.1em;
-        font-weight: 700;
 
-     &:first-child{
-            text-decoration: none;
-            background: $color-light-green;
-            color: white;
-            &:hover{
-                background: $color-dark-green;
-            }
-            &:focus{
-                outline: 0.125em solid $color-dark-green;
-                outline-offset: 0.25em;
-            }
-        }
-        &:nth-child(2){
-            background: none;
-            border: 2px solid $color-dark;
-            &:hover{
-                background-color: $color-dark;
-                color: $color-bg;
-            }
-            &:active{
-                outline: 0.125em solid $color-dark;
-                outline-offset: 0.25em;
-            }
-        }
-    }
-}
 // utilities classes
 
 .title-heading{
