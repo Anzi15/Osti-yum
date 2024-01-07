@@ -1,5 +1,7 @@
 const form = document.getElementById("form");
-        
+const modal = document.getElementById('modal-con');
+const closeModal = document.getElementById('x-close-modal');
+
 async function handleSubmit(event) {
   event.preventDefault();
   var data = new FormData(event.target);
@@ -11,8 +13,7 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-        //thanks page
-        alert("thanks for your message")
+        modal.classList.add("grid")
       form.reset()
     } else {
       response.json().then(data => {
@@ -27,4 +28,9 @@ async function handleSubmit(event) {
 
   });
 }
+function modalToggle(){
+  modal.classList.remove("grid")
+}
 form.addEventListener("submit", handleSubmit)
+closeModal.addEventListener("click",modalToggle)
+modal.addEventListener("click",modalToggle)

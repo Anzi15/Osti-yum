@@ -99,5 +99,58 @@ li {
     width: 90% !important;
   }
 }
+.grid {
+  display: grid !important;
+}
+
+#modal-con {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1000 !important;
+  display: none;
+  place-items: center;
+  background: rgba(20, 19, 19, 0.44);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.3px);
+  -webkit-backdrop-filter: blur(9.8px);
+  outline: none;
+}
+#modal-con #modal {
+  padding: 2rem 0;
+  background: white;
+  z-index: 1001 !important;
+  width: clamp(20rem, 40%, 30rem);
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+}
+#modal-con #modal .modal-header {
+  margin: 1rem;
+  display: flex;
+  padding: 0 1rem;
+  justify-content: right;
+}
+#modal-con #modal .modal-content {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+#modal-con #modal .modal-content .modal-txt {
+  color: #1b1b1b;
+  display: flex;
+}
+#modal-con #modal .modal-content .modal-figure {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+#modal-con #modal .modal-content .modal-figure img {
+  width: 50%;
+}
 
 /*# sourceMappingURL=contact-us.css.map */
