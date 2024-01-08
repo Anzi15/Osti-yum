@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Osti-yum</title>
-    <!-- stylings -->
-    <link rel="stylesheet" href="src\css\style.css">
+    <title>About us</title>
 
-    <script defer src="src/js/script.js"></script>
-    <script defer src="src/js/productsloader.js"></script>
-
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="stylesheet" href="../src/css/about-us.css">
+    <script defer src="../src/js/script.js"></script>
 </head>
 <body>
     <nav>
@@ -22,16 +20,16 @@
         <div id="nav-link" class="nav-links ">
             <ul>
                 <li><a href="../">Home</a></li>
-                <li><a href="/catalog/">Catalog</a></li>
-                <li><a href="/About-us/">About us</a></li>
-                <li><a href="/contact-us/">Contact us</a></li>
+                <li><a href="../catalog/">Catalog</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="../contact-us/">Contact us</a></li>
             </ul>
-        
+            
         </div>
-
+        
         <div class="cart">
             <button>
-                <a href="/cart/" role="not_link" class="clr-black">
+                <a href="../cart/" role="not_link" class="clr-black">
                     <svg xmlns="http://www.w3.org/2000/svg" width="2rem" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
                         <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
                     </svg>
@@ -47,46 +45,19 @@
         </div>
         
     </nav>
-    <section class="sec-1">
-        <div class="txt">
-            <h1 class="light-heading">Lets get you the food you love, till the very last bite</h1>
-            <p>Explore our menu where each dish is a tale of flavor, a journey into gastronomic pleasure, Illuminating each dish with expertise. How do we craft such savory delights? Through meticulous selection,</p>
-            <div class="cta-btn">
-                <a href="/catalog/">Explore catalog</a>
-                <a href="#speacialities_container">Our Speacialities</a>
+
+    <section class="sec-about-us">
+        <div role="box" class="banner-img">
+            <img src="../src/assets/plate-love-food.png" alt="">
+            <div class="txt-con">
+                <h1>About Us</h1>
             </div>
         </div>
 
-        <div class="img-container">
-            <img src="src/assets/chicked-saled.webp" alt="">
+        <div role="box" class="our-mission">
+            <h1 class="cen light-heading">Our Mission</h1>
         </div>
     </section>
-
-    <section class="sec-2">
-        <h1 class="title-heading cen">Our specialties</h1>
-        
-        <div id="speacialities_container" class="big-flex-group">
-
-            
-        </div>
-    </section>
-
-    <section class="sec-3">
-        <h1 class="title-heading cen m-p-heading">What people love about us?</h1>
-        
-        <div class="container">
-            <div class="textarea">
-                <h2 class="">We treat our customers as our guests</h2>
-                <p>Our dedicated team is not just here to serve, but to welcome you into an environment that feels like a home away from home. With a passion for culinary excellence and a dedication to exceptional service, we take pride in curating an ambiance where you're not just a customer; you're our honored guest</p>
-            </div>
-            
-            <div class="img">
-                <img src="src/assets/heart-bowl.webp" alt="">
-            </div>
-        </div>
-    </section>
-
-    <!-- will add more sections as desired -->
 
     <footer>
         <div class="ftr-container">
@@ -125,6 +96,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>

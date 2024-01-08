@@ -1,0 +1,55 @@
+li {
+  list-style-type: none;
+}
+
+* {
+  max-width: 100vw !important;
+  overflow-x: hidden !important;
+}
+* button {
+  cursor: pointer;
+}
+
+.light-heading {
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+}
+
+.sec-about-us {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.sec-about-us div[role=box] {
+  margin: 2rem 0;
+}
+.sec-about-us .banner-img {
+  background-color: #EBEBEB;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+.sec-about-us .banner-img img {
+  padding-left: 4rem;
+  height: 90%;
+  width: 35%;
+  aspect-ratio: 1/1;
+  min-height: none;
+  object-fit: cover;
+}
+.sec-about-us .banner-img .txt-con {
+  width: 65%;
+  height: 90%;
+  display: grid;
+  align-items: center;
+}
+.sec-about-us .banner-img .txt-con h1 {
+  letter-spacing: 0.03rem;
+  font-size: 2.5rem;
+  color: #282627;
+}
+
+/*# sourceMappingURL=about-us.css.map */

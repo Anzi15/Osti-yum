@@ -1,0 +1,41 @@
+@import "config";
+.sec-about-us{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    div[role="box"]{
+        margin: 2rem 0;
+    }
+    .banner-img{
+        background-color: #EBEBEB;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        align-items: center;
+
+        img{
+            padding-left: 4rem;
+            height: 90%;
+            width: 35%;
+            aspect-ratio: 1/1;
+            min-height: none;
+            object-fit: cover;
+            // padding: 1rem;
+        }
+
+        .txt-con{
+            width: 65%;
+            height: 90%;
+            display: grid;
+            align-items: center;
+            h1{
+                letter-spacing: .03rem;
+                font-size: 2.5rem;
+                color: #282627;
+            }
+        }
+    }
+}
