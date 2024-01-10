@@ -61,10 +61,10 @@ p {
   color: white;
 }
 .cta-btn button:first-child:hover, .cta-btn a:first-child:hover {
-  background: hsl(169, 100%, 16%);
+  background: #005243;
 }
 .cta-btn button:first-child:focus, .cta-btn a:first-child:focus {
-  outline: 0.125em solid hsl(169, 100%, 16%);
+  outline: 0.125em solid #005243;
   outline-offset: 0.25em;
 }
 .cta-btn button:nth-child(2), .cta-btn a:nth-child(2) {
@@ -152,6 +152,7 @@ nav .nav-toggler {
     flex-direction: column !important;
     position: fixed;
     top: 0;
+    right: 0;
     padding: 24vh 0;
     height: 100vh !important;
     width: 25%;
@@ -185,7 +186,7 @@ nav .nav-toggler {
 .title-heading {
   margin: 3.5rem 0;
   font-size: 2rem;
-  color: hsl(169, 100%, 16%);
+  color: #005243;
 }
 
 .cen {
@@ -212,7 +213,7 @@ section {
   padding: 1rem;
 }
 .sec-1 .txt h1 {
-  color: hsl(169, 100%, 16%);
+  color: #005243;
 }
 .sec-1 .img-container {
   width: 60%;
@@ -310,7 +311,7 @@ section {
 footer {
   width: 100vw;
   height: 33vh;
-  background: hsl(169, 100%, 16%);
+  background: #005243;
   display: grid;
   place-items: center;
 }

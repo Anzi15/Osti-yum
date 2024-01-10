@@ -37,7 +37,7 @@ p{
      &:first-child{
             text-decoration: none;
             background: $color-light-green;
-            color: white ;
+            color: white;
             &:hover{
                 background: $color-dark-green;
             }
@@ -144,6 +144,7 @@ nav{
             flex-direction: column !important;
             position: fixed;
             top: 0;
+            right: 0;
             padding: 24vh 0;
             height: 100vh !important;
             width: 25%;

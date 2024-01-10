@@ -14,9 +14,10 @@ async function handleSubmit(event) {
         'Accept': 'application/json'
     }
   }).then(response => {
-    if (response.ok) {
-        modal.classList.add("grid")
+    modal.classList.add("grid")
       form.reset()
+    if (response.ok) {
+        
     } else {
       response.json().then(data => {
         if (Object.hasOwn(data, 'errors')) {
