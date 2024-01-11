@@ -1,101 +1,194 @@
 {
         "speacialitites":[
             {
-                "title":" Chicken Karahi",
-                "description":"Discover the culinary magic of our Chicken Karahi, a symphony of aromatic spices and succulent chicken pieces cooked to perfection. Immerse yourself in the rich, bold flavors of this traditional dish, where the smoky essence of the karahi enhances the natural taste of tender chicken. Each bite is a journey through the heart of Pakistani cuisine",
-                "image":[
-                    "https://images.unsplash.com/photo-1603496987351-f84a3ba5ec85?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://img.freepik.com/free-photo/front-view-cooked-vegetable-meal-inside-pan-brown-wooden-desk_140725-61551.jpg?w=740&t=st=1703584159~exp=1703584759~hmac=bc9986a6edb692a2ab37eba60d68d1e78656871e14e5725b233bf5b6b0a9d115"
-                ],
-                "product_Id":"CK2023-002",
-                "price": "$999",
-                "compared_price": "$1650"
+            "title": "Spicy Grilled Salmon",
+            "description": "Indulge in the tantalizing flavors of our Spicy Grilled Salmon. Fresh salmon marinated in a blend of spicy seasonings, char-grilled to perfection. Served with a side of seasoned vegetables for a truly exquisite dining experience.",
+            "image": ["https://img.freepik.com/free-photo/grilled-fish-close-up-decorated-with-vegetables_1303-12328.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+            "product_Id": "SGS2024-001",
+            "price": "$19.99",
+            "compared_price": "$29.99"
             },
             {
-                "title":"Bombay biryani",
-                "description":"Embark on a culinary journey with our Bombay Biryani, a masterpiece that captures the vibrant essence of Mumbai's street food culture. Immerse yourself in the fragrant aroma of basmati rice layered with tender pieces of marinated meat, aromatic spices, and caramelized onions. The burst of flavors, ranging from savory to slightly tangy",
-                "image":[
-                    "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=1488&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://images.unsplash.com/photo-1630851840633-f96999247032?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                ],
-                "product_Id":"BB2023-003",
-                "price": "$499",
-                "compared_price": "$799"
-
+            "title": "Vegetarian Pasta Primavera",
+            "description": "Experience the harmony of flavors in our Vegetarian Pasta Primavera. A delightful mix of fresh vegetables tossed with al dente pasta in a savory herb-infused tomato sauce. A perfect choice for those who crave a burst of garden-fresh goodness.",
+            "image": ["https://img.freepik.com/free-photo/overhead-view-fusilli-pasta-with-vegetables-white-background_23-2147926018.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+            "product_Id": "VPP2024-002",
+            "price": "$14.99",
+            "compared_price": "$24.99"
             },
             {
-                "title":"Barbeque",
-                "description":"Ignite your taste buds with the smoky allure of our Barbecue sensation. Succulent cuts of meat, expertly marinated and slow-cooked to perfection, deliver a mouthwatering experience that embodies the essence of outdoor grilling. The savory blend of spices and the charred aroma will transport you to a backyard barbecue paradise",
-                "image":[
-                    "https://images.unsplash.com/photo-1590828413506-d632c9e582c8?q=80&w=1441&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://images.unsplash.com/photo-1632158929413-168599fffbf7?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://images.unsplash.com/photo-1571302703929-6209091a75fa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                ],
-                "product_Id":"BBQ2023-004"
+                "title": "Classic Margherita Pizza",
+                "description": "Savor the simplicity of our Classic Margherita Pizza. A thin, crispy crust topped with ripe tomatoes, fresh mozzarella, and fragrant basil leaves. Immerse yourself in the authentic flavors of this timeless Italian favorite.",
+                "image": ["https://img.freepik.com/free-photo/mixed-ingredient-pizza-wooden-board_114579-9317.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                "product_Id": "CMP2024-003",
+                "price": "$12.99",
+                "compared_price": "$18.99"
             },
             {
-                "title":"Chinese Biryani",
-                "description":"Savor the fusion in our Chinese Biryani! Fragrant basmati, stir-fried veggies, and tender chicken blend with Chinese spices for a unique culinary experience. Elevate your dining with this delicious crossover!",
-                "image":[
-                    "https://images.unsplash.com/photo-1633945274417-ab205ae69d10?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://images.unsplash.com/photo-1552590635-27c2c2128abf?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://img.freepik.com/free-photo/view-tasty-rice-meal-dinner-with-pisum-carrot-purple-stripped-towel-its-ingredients-blue-table_140725-160444.jpg?w=740&t=st=1703584501~exp=1703585101~hmac=79eefc9c61f3ce22ff0ef93020737aac58dfe0898547b7bd67a595a2cca2a598"
-                ],
-                "product_Id":"CB2023-001",
-                "price": "$599",
-                "compared_price": "$899"
+                "title": "Mango Tango Smoothie",
+                "description": "Quench your thirst with the refreshing taste of our Mango Tango Smoothie. A tropical blend of ripe mangoes, yogurt, and a hint of citrus, creating a luscious and invigorating beverage to delight your taste buds.",
+                "image": ["https://img.freepik.com/free-photo/pineapple-juice-with-pieces-raw-pineapple_1150-19258.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                "product_Id": "MTS2024-005",
+                "price": "$6.99",
+                "compared_price": "$9.99"
             }
+              
         ],
         "all_products":[
+                {
+                "title": "Spicy Grilled Salmon",
+                "description": "Indulge in the tantalizing flavors of our Spicy Grilled Salmon. Fresh salmon marinated in a blend of spicy seasonings, char-grilled to perfection. Served with a side of seasoned vegetables for a truly exquisite dining experience.",
+                "image": ["https://img.freepik.com/free-photo/grilled-fish-close-up-decorated-with-vegetables_1303-12328.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                "product_Id": "SGS2024-001",
+                "price": "$19.99",
+                "compared_price": "$29.99"
+                },
+                {
+                "title": "Vegetarian Pasta Primavera",
+                "description": "Experience the harmony of flavors in our Vegetarian Pasta Primavera. A delightful mix of fresh vegetables tossed with al dente pasta in a savory herb-infused tomato sauce. A perfect choice for those who crave a burst of garden-fresh goodness.",
+                "image": ["https://img.freepik.com/free-photo/overhead-view-fusilli-pasta-with-vegetables-white-background_23-2147926018.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                "product_Id": "VPP2024-002",
+                "price": "$14.99",
+                "compared_price": "$24.99"
+                },
+                {
+                    "title": "Classic Margherita Pizza",
+                    "description": "Savor the simplicity of our Classic Margherita Pizza. A thin, crispy crust topped with ripe tomatoes, fresh mozzarella, and fragrant basil leaves. Immerse yourself in the authentic flavors of this timeless Italian favorite.",
+                    "image": ["https://img.freepik.com/free-photo/mixed-ingredient-pizza-wooden-board_114579-9317.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "product_Id": "CMP2024-003",
+                    "price": "$12.99",
+                    "compared_price": "$18.99"
+                },
+                {
+                    "title": "Mango Tango Smoothie",
+                    "description": "Quench your thirst with the refreshing taste of our Mango Tango Smoothie. A tropical blend of ripe mangoes, yogurt, and a hint of citrus, creating a luscious and invigorating beverage to delight your taste buds.",
+                    "image": ["https://img.freepik.com/free-photo/pineapple-juice-with-pieces-raw-pineapple_1150-19258.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "product_Id": "MTS2024-005",
+                    "price": "$6.99",
+                    "compared_price": "$9.99"
+                },
+                {
+                "title": "Shrimp Scampi Linguine",
+                "description": "Indulge in the taste of the sea with our Shrimp Scampi Linguine. Succulent shrimp sautéed in garlic-infused olive oil, tossed with al dente linguine and sprinkled with fresh parsley. A seafood lover's delight!",
+                "image": ["https://img.freepik.com/free-photo/spaghetti-with-spicy-mixed-seafood-dark-background_1150-45298.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                "product_Id": "SSL2024-007",
+                "price": "$18.99",
+                "compared_price": "$26.99"
+                },
+                {
+                "title": "Cheese Lover's Platter",
+                "description": "For the ultimate cheese enthusiast, our Cheese Lover's Platter offers a delectable assortment of artisan cheeses, accompanied by crackers, fresh fruit, and honey. A sophisticated and delightful tasting experience.",
+                "image": ["https://img.freepik.com/free-photo/breakfast-set-with-arrangement-food_141793-16698.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                "product_Id": "CLP2024-008",
+                "price": "$22.99",
+                "compared_price": "$32.99"
+                },
+                {
+                    "title": "Mediterranean Chickpea Salad",
+                    "description": "Elevate your salad experience with our Mediterranean Chickpea Salad. A vibrant mix of chickpeas, cherry tomatoes, cucumber, feta cheese, and olives tossed in a zesty Mediterranean vinaigrette. Fresh, healthy, and flavorful!",
+                    "image": ["https://img.freepik.com/free-photo/lentil-salad-with-peppersonion-carrot-bowl_123827-21489.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "product_Id": "MCS2024-009",
+                    "price": "$13.99",
+                    "compared_price": "$19.99"
+                },
+                {
+                    "title": "Chocolate Lava Cake",
+                    "description": "Indulge your sweet tooth with our decadent Chocolate Lava Cake. A rich and gooey chocolate center encased in a moist chocolate cake, served warm and topped with a scoop of vanilla ice cream. A heavenly dessert experience.",
+                    "image": ["https://img.freepik.com/free-photo/chocolate-fondue-with-icecream-ball_114579-2053.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "product_Id": "CLC2024-010",
+                    "price": "$8.99",
+                    "compared_price": "$12.99"
+                },
+                {
+                    "title": "Caprese Bruschetta",
+                    "description": "Savor the freshness of our Caprese Bruschetta. Juicy tomatoes, fresh mozzarella, and basil drizzled with balsamic glaze, served on crispy toasted baguette slices. A delightful appetizer bursting with Mediterranean flavors.",
+                    "image": ["https://img.freepik.com/free-photo/sandwiches-with-cream-cheese-tomatoes-plate_23-2148749079.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "product_Id": "CB2024-011",
+                    "price": "$9.99",
+                    "compared_price": "$14.99"
+                },
+                {
+                    "title": "Sushi Delight Platter",
+                    "description": "Experience the artistry of Japanese cuisine with our Sushi Delight Platter. An assortment of nigiri and maki sushi featuring fresh, high-quality ingredients. Perfect for sushi enthusiasts and those new to this culinary delight.",
+                    "image": ["https://img.freepik.com/free-photo/sushi-tray-with-makis-tuna-nigiris-salmon-view-from_463209-112.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "product_Id": "SDP2024-012",
+                    "price": "$24.99",
+                    "compared_price": "$34.99"
+                },
+                {
+                    "title": "Berry Blast Smoothie Bowl",
+                    "description": "Start your day with a burst of energy with our Berry Blast Smoothie Bowl. A vibrant blend of mixed berries, banana, and granola, topped with fresh fruits and a drizzle of honey. A nutritious and delicious breakfast option.",
+                    "image": ["https://img.freepik.com/free-photo/bowl-filled-with-pink-liquid_209303-72.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "product_Id": "BBSB2024-014",
+                    "price": "$11.99",
+                    "compared_price": "$16.99"
+                },
+                {
+                    "title": "Lemon Garlic Butter Shrimp",
+                    "description": "Delight your taste buds with our Lemon Garlic Butter Shrimp. Succulent shrimp sautéed in a lemony garlic butter sauce, served with a side of fluffy rice. A quick and flavorful seafood dish for any occasion.",
+                    "image": ["https://img.freepik.com/free-photo/top-view-mussels-sauce_23-2148393743.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "product_Id": "LGBS2024-015",
+                    "price": "$20.99",
+                    "compared_price": "$28.99"
+                },
+                {
+                    "title": "Crispy Chicken Caesar Wrap",
+                    "description": "Experience the perfect blend of flavors with our Crispy Chicken Caesar Wrap. Crispy chicken tenders, romaine lettuce, Parmesan cheese, and Caesar dressing, all wrapped in a soft tortilla. A satisfying and portable meal option.",
+                    "image": ["https://img.freepik.com/free-photo/delicious-tortilla_144627-12083.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "product_Id": "CCCW2024-016",
+                    "price": "$12.99",
+                    "compared_price": "$17.99"
+                },
+                {
+                    "title": "Thai Basil Beef Stir-Fry",
+                    "description": "Tantalize your taste buds with our Thai Basil Beef Stir-Fry. Tender strips of beef wok-tossed with fresh vegetables and aromatic Thai basil in a savory sauce. A flavorful and aromatic dish inspired by Thai cuisine.",
+                    "image": ["https://img.freepik.com/free-photo/stir-fried-pork-basil-banana-leaves-black-dish_1150-24132.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "product_Id": "TBBF2024-017",
+                    "price": "$14.99",
+                    "compared_price": "$21.99"
+                },
+                {
+                    "title": "Blueberry Cheesecake",
+                    "description": "Indulge in the lusciousness of our Blueberry Cheesecake. Creamy cheesecake with a graham cracker crust, topped with a generous layer of blueberry compote. A delightful dessert to satisfy your sweet cravings.",
+                    "image": ["https://img.freepik.com/premium-photo/fresh-yummy-handmade-piece-blueberry-cheesecake-generative-ai_87934-1202.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "product_Id": "BCC2024-018",
+                    "price": "$16.99",
+                    "compared_price": "$24.99"
+                }   
+        ],
+        "crousel":[
             {
-                "title":" Chicken Karahi",
-                "description":"Discover the culinary magic of our Chicken Karahi, a symphony of aromatic spices and succulent chicken pieces cooked to perfection. Immerse yourself in the rich, bold flavors of this traditional dish, where the smoky essence of the karahi enhances the natural taste of tender chicken. Each bite is a journey through the heart of Pakistani cuisine",
-                "image":[
-                    "https://images.unsplash.com/photo-1603496987351-f84a3ba5ec85?q=80&w=1476&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://img.freepik.com/free-photo/front-view-cooked-vegetable-meal-inside-pan-brown-wooden-desk_140725-61551.jpg?w=740&t=st=1703584159~exp=1703584759~hmac=bc9986a6edb692a2ab37eba60d68d1e78656871e14e5725b233bf5b6b0a9d115",
-                    "https://img.freepik.com/free-photo/chicken-fried-hot-pot-with-spicy-sauce-korean-style_1150-42868.jpg?w=740&t=st=1703585345~exp=1703585945~hmac=a71218e84b6d9f0c207c3bad3917849bb9212d7ec58334b79a5ca5b0d0c7154b"
-                ],
-                "product_Id":"CK2023-002",
-                "price": "$999",
-                "compared_price": "$1650"
+                "title": "Ultimate Surf and Turf Platter",
+                "description": "Experience the epitome of indulgence with our Ultimate Surf and Turf Platter. Succulent lobster tail and perfectly grilled filet mignon, served with garlic butter sauce. A luxurious dish that defines the pinnacle of fine dining.",
+                "image": ["image_url_61.jpg", "image_url_62.jpg", "image_url_63.jpg"],
+                "product_Id": "USTP2024-021",
+                "price": "$49.99",
+                "compared_price": "$69.99"
             },
             {
-                "title":"Bombay biryani",
-                "description":"Embark on a culinary journey with our Bombay Biryani, a masterpiece that captures the vibrant essence of Mumbai's street food culture. Immerse yourself in the fragrant aroma of basmati rice layered with tender pieces of marinated meat, aromatic spices, and caramelized onions. The burst of flavors, ranging from savory to slightly tangy",
-                "image":[
-                    "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=1488&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://images.unsplash.com/photo-1599043513900-ed6fe01d3833?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://images.unsplash.com/photo-1630851840633-f96999247032?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                ],
-                "product_Id":"BB2023-003",
-                "price": "$499",
-                "compared_price": "$799"
-
+                "title": "Truffle Infused Wagyu Steak",
+                "description": "For the connoisseur of exquisite flavors, our Truffle Infused Wagyu Steak is a culinary masterpiece. A tender Wagyu steak infused with the earthy richness of truffle oil, creating a dining experience like no other.",
+                "image": ["image_url_64.jpg", "image_url_65.jpg", "image_url_66.jpg"],
+                "product_Id": "TIWS2024-022",
+                "price": "$79.99",
+                "compared_price": "$99.99"
             },
             {
-                "title":"Barbeque",
-                "description":"Ignite your taste buds with the smoky allure of our Barbecue sensation. Succulent cuts of meat, expertly marinated and slow-cooked to perfection, deliver a mouthwatering experience that embodies the essence of outdoor grilling. The savory blend of spices and the charred aroma will transport you to a backyard barbecue paradise",
-                "image":[
-                    "https://images.unsplash.com/photo-1590828413506-d632c9e582c8?q=80&w=1441&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://images.unsplash.com/photo-1632158929413-168599fffbf7?q=80&w=1372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://images.unsplash.com/photo-1571302703929-6209091a75fa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                ],
-                "product_Id":"BBQ2023-004",
-                "price": "$1299",
-                "compared_price": "$1899"
-            },
+                "title": "Golden Lobster Bisque",
+                "description": "Indulge in luxury with our Golden Lobster Bisque. A velvety-smooth soup enriched with lobster essence and a touch of gold leaf for a touch of opulence. An exquisite appetizer that captivates the senses.",
+                "image": ["image_url_67.jpg", "image_url_68.jpg", "image_url_69.jpg"],
+                "product_Id": "GLB2024-023",
+                "price": "$29.99",
+                "compared_price": "$39.99"
+            },                            
             {
-                "title":"Chinese Biryani",
-                "description":"Savor the fusion in our Chinese Biryani! Fragrant basmati, stir-fried veggies, and tender chicken blend with Chinese spices for a unique culinary experience. Elevate your dining with this delicious crossover!",
-                "image":[
-                    "https://images.unsplash.com/photo-1633945274417-ab205ae69d10?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-                    "https://img.freepik.com/free-photo/top-view-tasty-boiled-rice-with-beans-meat-inside-plate-dark-desk_179666-27241.jpg?w=740&t=st=1703585080~exp=1703585680~hmac=2f5dcf464e004c4847861982c4cf9a33520c5e8e1e6e16201b9b41cb826fdbf4",
-                    "https://img.freepik.com/free-photo/view-delicious-rice-meal-with-pisum-carrot-served-with-green-plate-cutlery-set-mixed-color-background-with-free-space_140725-160450.jpg?w=740&t=st=1703584906~exp=1703585506~hmac=f3c6ba0d52ba81fc1d6722aee2b1f0e4df48b2b5ec0860656187fd5c0917a08b"
-                ],
-                "product_Id":"CB2023-001",
-                "price": "$599",
-                "compared_price": "$899"
+                "title": "Diamond Jubilee Chocolate Fondue",
+                "description": "Celebrate with our Diamond Jubilee Chocolate Fondue, a dessert fit for royalty. Rich chocolate fondue served with an array of fresh fruits, marshmallows, and delicate pastries, all dusted with edible gold. An extravagant sweet finale.",
+                "image": ["image_url_70.jpg", "image_url_71.jpg", "image_url_72.jpg"],
+                "product_Id": "DJCF2024-024",
+                "price": "$39.99",
+                "compared_price": "$49.99"
             }
+              
         ]
 }

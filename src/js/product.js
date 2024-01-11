@@ -72,8 +72,6 @@ const loadProduct = function(product){
    product_segments.compared_price.innerText = product.compared_price;
    product_segments.price.innerText = product.price;
    product_segments.image.bigImg.src = product.image[0];
-   product_segments.image.short_imgs[0].src = product.image[1];
-   product_segments.image.short_imgs[1].src = product.image[2];
 }
 getProductId()
 fecther()

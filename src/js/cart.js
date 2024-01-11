@@ -3,6 +3,50 @@ const empty_cart_sec = document.getElementById('empty_cart_sec');
 const cart_product = document.getElementById('product-cart');
 const productCon = document.getElementById('products-con');
 var price_elems;
+
+const priceUpdater = function(elemId){
+    const inpValue = parseInt(document.getElementById(`${elemId}`).value)
+    const splitedId = [elemId.split("_")[1]];
+    fecther(splitedId,priceLoader,inpValue)
+}
+const plusOne = function(elemId){
+    const bothInp = document.querySelectorAll(`#${elemId}`)
+    for(let i=0; i<bothInp.length; i++){
+        const currentValue = parseInt(bothInp[i].value);
+        bothInp[i].value = currentValue +1;
+    }
+}
+const minusOne = function(elemId){
+    const bothInp = document.querySelectorAll(`#${elemId}`)
+    for(let i=0; i<bothInp.length; i++){
+        const currentValue = bothInp[i].value;
+        if(currentValue>1){
+            bothInp[i].value = currentValue - 1;
+        }
+    }
+}
+const quantityUpdater = function(elemId=null,action){
+    action(elemId);
+    priceUpdater(elemId);
+}
+const valueLimiter = function(elemId){
+    const elem = document.querySelectorAll(`#${elemId}`);
+    
+    elem.forEach(elem =>{
+        if(elem.value<1){
+            elem.value = 1;
+        }
+    })
+
+    priceUpdater(elemId);
+}
+const priceLoader = function(inpValue, productPrice, elemId){
+    const priceElem = document.getElementById(`price-${elemId}`);
+    const product_Price = parseInt(productPrice.split("$")[1])
+    priceElem.innerHTML = `$${eval(inpValue * product_Price)}`
+    totalPriceUpdater()
+    console.log(inpValue, "*", product_Price)
+}
 const totalPriceDeductor = function(priceDeducted){
     const totalElem = document.getElementById('total-price');
     const toBeDeducted = parseInt(document.getElementById(priceDeducted).innerHTML.split("$")[1])
@@ -26,7 +70,7 @@ const removeCartItem = function(cartItem){
     const itemId = cartItem.split("_")[1];
     totalPriceDeductor(`price-${itemId}`)
     const productElem = document.getElementById(`product_${itemId}`);
-
+    productElem.childNodes[3].children[0].innerHTML="$0"
     productElem.style.display="none";
     cartItemsUpdater(itemId);
     checkCartEmptyUpStatus()
@@ -87,7 +131,6 @@ const loadProduct = function(product){
     </div>
 </div>`
 }
-
 const filterCartItems = function(cartItems,data,action,inpValue){
     
     const cartItemsArr = typeof(cartItems) == "string" ? JSON.parse(cartItems) : cartItems;
@@ -97,7 +140,6 @@ const filterCartItems = function(cartItems,data,action,inpValue){
            if(action ==loadProduct){
             action(item)
            }else{
-
             action(inpValue,item.price,item.product_Id)
            }
         }
@@ -108,7 +150,6 @@ const filterCartItems = function(cartItems,data,action,inpValue){
     totalPriceUpdater()
 
 }
-
 function checkCartEmptyUpStatus(action){
     if(!checkCartStatus(cart_items)){
         cart_product.classList.toggle("none")
@@ -131,5 +172,4 @@ function checkCartEmptyUpStatus(action){
         }
     }
 }
-
 checkCartEmptyUpStatus(fecther)

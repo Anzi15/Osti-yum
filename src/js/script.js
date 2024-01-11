@@ -30,3 +30,27 @@ window.onscroll = function(e) {
   }
   oldScrollY = window.scrollY;
 }
+
+function setLocalStorage(product_Id) {
+  localStorage.setItem('current_product_id',product_Id)  
+ }
+ 
+ function addToCart(product_Id){
+ const cart_items = localStorage.getItem("cart_items");
+     
+     if(cart_items !== null){
+         let current_cart_items = JSON.parse(cart_items);
+         if(!current_cart_items.includes(product_Id)){
+             
+             current_cart_items.push(product_Id);
+             current_cart_items = JSON.stringify(current_cart_items);
+             localStorage.setItem("cart_items",current_cart_items)
+ 
+         }
+     }else if(cart_items == null){
+         let new_cart_items = [product_Id];
+         const new_current_cart_items = JSON.stringify(new_cart_items);
+ 
+         localStorage.setItem("cart_items",new_current_cart_items);
+     }
+ }

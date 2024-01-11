@@ -26,7 +26,7 @@ const loader = (elem,data)=>{
      
  </div>
  <div class="cta-btn">
-     <a href="${window.location.origin}/?Id=${data.product_Id}" onclick="setLocalStorage('${data.product_Id}')">
+     <a href="${window.location.origin}/product?Id=${data.product_Id}" onclick="setLocalStorage('${data.product_Id}')">
          Buy now
      </a>
      <button onclick="addToCart('${data.product_Id}')">
@@ -37,27 +37,5 @@ const loader = (elem,data)=>{
 
 }
 
-function setLocalStorage(product_Id) {
- localStorage.setItem('current_product_id',product_Id)  
-}
 
-function addToCart(product_Id){
-const cart_items = localStorage.getItem("cart_items");
-    
-    if(cart_items !== null){
-        let current_cart_items = JSON.parse(cart_items);
-        if(!current_cart_items.includes(product_Id)){
-            
-            current_cart_items.push(product_Id);
-            current_cart_items = JSON.stringify(current_cart_items);
-            localStorage.setItem("cart_items",current_cart_items)
-
-        }
-    }else if(cart_items == null){
-        let new_cart_items = [product_Id];
-        const new_current_cart_items = JSON.stringify(new_cart_items);
-
-        localStorage.setItem("cart_items",new_current_cart_items);
-    }
-}
 fecther()
