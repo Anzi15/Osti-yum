@@ -94,7 +94,7 @@
                 {
                     "title": "Chocolate Lava Cake",
                     "description": "Indulge your sweet tooth with our decadent Chocolate Lava Cake. A rich and gooey chocolate center encased in a moist chocolate cake, served warm and topped with a scoop of vanilla ice cream. A heavenly dessert experience.",
-                    "image": ["https://img.freepik.com/free-photo/chocolate-fondue-with-icecream-ball_114579-2053.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "image": ["https://img.freepik.com/premium-photo/chocolate-brownie-with-vanilla-ice-cream-plate_70216-5312.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
                     "product_Id": "CLC2024-010",
                     "price": "$8.99",
                     "compared_price": "$12.99"
@@ -150,21 +150,21 @@
                 {
                     "title": "Blueberry Cheesecake",
                     "description": "Indulge in the lusciousness of our Blueberry Cheesecake. Creamy cheesecake with a graham cracker crust, topped with a generous layer of blueberry compote. A delightful dessert to satisfy your sweet cravings.",
-                    "image": ["https://img.freepik.com/premium-photo/fresh-yummy-handmade-piece-blueberry-cheesecake-generative-ai_87934-1202.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "image": ["https://img.freepik.com/free-photo/high-angle-cake-with-flowers-plate_23-2149455735.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
                     "product_Id": "BCC2024-018",
                     "price": "$16.99",
                     "compared_price": "$24.99"
-                }   
+                },   
+                {
+                    "title": "Ultimate Surf and Turf Platter",
+                    "description": "Experience the epitome of indulgence with our Ultimate Surf and Turf Platter. Succulent lobster tail and perfectly grilled filet mignon, served with garlic butter sauce. A luxurious dish that defines the pinnacle of fine dining.",
+                    "image": ["https://img.freepik.com/free-photo/fried-meat-with-prawns-zuccihni-spinach-mushroom-side-view_141793-3116.jpg?size=626&ext=jpg&uid=R95282427&ga=GA1.1.1369177403.1691598228&semt=ais"],
+                    "product_Id": "USTP2024-021",
+                    "price": "$49.99",
+                    "compared_price": "$69.99"
+                }
         ],
         "crousel":[
-            {
-                "title": "Ultimate Surf and Turf Platter",
-                "description": "Experience the epitome of indulgence with our Ultimate Surf and Turf Platter. Succulent lobster tail and perfectly grilled filet mignon, served with garlic butter sauce. A luxurious dish that defines the pinnacle of fine dining.",
-                "image": ["image_url_61.jpg", "image_url_62.jpg", "image_url_63.jpg"],
-                "product_Id": "USTP2024-021",
-                "price": "$49.99",
-                "compared_price": "$69.99"
-            },
             {
                 "title": "Truffle Infused Wagyu Steak",
                 "description": "For the connoisseur of exquisite flavors, our Truffle Infused Wagyu Steak is a culinary masterpiece. A tender Wagyu steak infused with the earthy richness of truffle oil, creating a dining experience like no other.",

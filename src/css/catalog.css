@@ -1,0 +1,25 @@
+main {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+main .product-con {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  min-width: 601px;
+  justify-content: space-evenly;
+}
+main .product-con .product {
+  width: 45%;
+  color: black;
+  text-decoration: none;
+  margin: 2rem 0;
+}
+main .product-con .product:hover img {
+  transition: scale 0.7s ease;
+  scale: 1.02;
+}
+
+/*# sourceMappingURL=catalog.css.map */
