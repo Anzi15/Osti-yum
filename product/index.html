@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+
     <link rel="stylesheet" href="../src/css/style.css">
     <link rel="stylesheet" href="../src/css/individual_product.css">
     
@@ -74,9 +74,7 @@
         <div class="text-area-container">
             <div class="text-area">
                 <div class="product_title_con">
-
                     <h2 class="product_title" id="product_title"></h2>
-
                 </div>
 
                 <div class="price_con">
@@ -85,14 +83,14 @@
                 </div>
 
                 <div class="individual-cta-btn">
-                    <button>Add to cart</button>
-                    <button>Buy it now</button>
+                    <button id="cta-product-cart">Add to cart</button>
+                    <button id="cta-product-buy">Buy it now</button>
                 </div>
 
                 <div class="quantity-con">
                     <h4 class="quantity-heading">Quantity</h4>
                     <quantity-input class="quantity">
-                        <button onclick="quantityUpdater(minusOne)" id="qtty-mns-btn">-</button>
+                        <button id="qtty-mns-btn">-</button>
                         <input type="number" value="1" name="" id="quantity-inp">
                         <button id="qtty-pls-btn">+</button>
                     </quantity-inp>

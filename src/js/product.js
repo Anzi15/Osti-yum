@@ -1,4 +1,6 @@
 let stored_product_id = getParameter("Id");
+const product_cta_btn_cart = document.getElementById('cta-product-cart');
+const product_cta_btn_buy = document.getElementById('cta-product-cart');
 const product_Section = document.getElementById('product_section');
 const product_segments = {
     "title": document.getElementById('product_title'),
@@ -30,18 +32,15 @@ function getProductId(){
        stored_product_id == getParameter("Id");
     }
 }
-
 function getParameter(key) {
     const url = new URL(window.location.href);
     return url.searchParams.get(key);
 }
-
  function setParameter(key, value) {
     const url = new URL(window.location.href);
     url.searchParams.set(key, value);
     window.history.replaceState({}, '', url);
 }
-
 async function fecther(){
     await fetch('../src/json/products.json')
     .then(response => response.json())
@@ -50,7 +49,6 @@ async function fecther(){
     })
        
 }
-
 const loadInDom = function(data){
     productSearher(stored_product_id,data.all_products)
 }
@@ -72,6 +70,14 @@ const loadProduct = function(product){
    product_segments.compared_price.innerText = product.compared_price;
    product_segments.price.innerText = product.price;
    product_segments.image.bigImg.src = product.image[0];
+
+   document.head.innerHTML += `    <title>${product.title}</title>
+   <meta name="description" content="${product.description}">`
+
+   product_cta_btn_cart.addEventListener("click",()=>{
+    addToCart(product.product_Id)
+})
 }
+
 getProductId()
 fecther()
