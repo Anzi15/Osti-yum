@@ -7,21 +7,19 @@ const product_segments = {
     "image": {
        bigImg: document.getElementById('big_img'),
        short_imgs: document.querySelectorAll('.short_imgs button img')
-
     }
     ,
     "compared_price": document.getElementById('compared_price'),
     "price": document.getElementById('price'),
-    "description": document.getElementById('product_description')
+    "description": document.getElementById('product_description'),
+    "buy_now_link":document.getElementById('buy-now-link')
 }
-
 if(stored_product_id ==null || stored_product_id == undefined){
     setParameter("Id",localStorage.getItem("current_product_id"))
     stored_product_id = getParameter("Id")
 }else{
     localStorage.setItem("current_product_id",getParameter("Id"))
 }
-
 function getProductId(){
     if(stored_product_id !== null){
         setParameter("Id",stored_product_id);
@@ -36,7 +34,7 @@ function getParameter(key) {
     const url = new URL(window.location.href);
     return url.searchParams.get(key);
 }
- function setParameter(key, value) {
+function setParameter(key, value) {
     const url = new URL(window.location.href);
     url.searchParams.set(key, value);
     window.history.replaceState({}, '', url);
@@ -52,7 +50,6 @@ async function fecther(){
 const loadInDom = function(data){
     productSearher(stored_product_id,data.all_products)
 }
-
 const productSearher = function(query, data){
 
     for(let i=0; i<data.length; i++){
@@ -70,7 +67,6 @@ const loadProduct = function(product){
    product_segments.compared_price.innerText = product.compared_price;
    product_segments.price.innerText = product.price;
    product_segments.image.bigImg.src = product.image[0];
-
    document.head.innerHTML += `    <title>${product.title}</title>
    <meta name="description" content="${product.description}">`
 

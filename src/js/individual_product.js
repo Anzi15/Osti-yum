@@ -2,13 +2,11 @@ const quantityInput = document.getElementById('quantity-inp');
 const qttyPlusBtn = document.getElementById('qtty-pls-btn');
 const qttyMinusBtn = document.getElementById('qtty-mns-btn');
 const product_imgs_btn = document.querySelectorAll(".product_imgs")
-
 product_imgs_btn.forEach(elem =>{
     elem.addEventListener("click",()=>{
         img_modal(elem)
     })
 })
-
 function img_modal(elem){
     if(elem){
         elem.classList.toggle("full-screen")

@@ -2,6 +2,7 @@ const navlink = document.getElementById('nav-link');
 const nav_toggler = document.getElementById('open-nav');
 const footer_year = document.getElementById('year');
 const nav = document.querySelector("nav");
+const modal = document.getElementById('modal-con');
 nav_toggler.addEventListener('click',toggleView)
 nav_toggler.addEventListener('click',toggleView)
 
@@ -12,7 +13,9 @@ function footerYearUpdater(){
     footer_year.innerHTML
    footer_year.innerText = new Date().getFullYear();
 }
-
+function modalToggle(){
+  modal.classList.remove("grid")
+}
 window.addEventListener('load',footerYearUpdater)
 
 var oldScrollY = window.scrollY;

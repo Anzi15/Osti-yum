@@ -11,6 +11,7 @@ $color-dark-blue: #1A669C;
 $color-bisque: #FFC170;
 $color-grey: #1b1b1b;
 $color-light-grey: grey;
+$color-ultra-light-grey: rgb(210, 210, 210);
 
 //breakpoints 
 $breakpoint-large: 1920px;
@@ -35,4 +36,9 @@ li{
 .light-heading{
         font-weight: 400;
         letter-spacing: 0.03rem;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

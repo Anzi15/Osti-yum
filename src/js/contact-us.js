@@ -1,5 +1,4 @@
 const form = document.getElementById("form");
-const modal = document.getElementById('modal-con');
 const closeModal = document.getElementById('x-close-modal');
 const modal_msg = document.getElementById('modal-msg');
 const modal_img = document.getElementById('modal-img');
@@ -34,9 +33,7 @@ async function handleSubmit(event) {
 
   });
 }
-function modalToggle(){
-  modal.classList.remove("grid")
-}
+
 form.addEventListener("submit", handleSubmit)
 closeModal.addEventListener("click",modalToggle)
 modal.addEventListener("click",modalToggle)
