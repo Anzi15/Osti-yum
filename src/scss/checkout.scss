@@ -5,6 +5,7 @@ section{
     min-height: 100vh;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap-reverse;
     form{
         width: 45%;
         min-height: 80%;
@@ -110,4 +111,17 @@ section{
 
     }
 
+}
+
+@media (max-width:$breakpoint-midle-tablet) {
+    section{
+        flex-wrap: wrap-reverse;
+    }
+    .product-info{
+        width: 100%;
+        min-height: 15rem !important;
+    }
+    form{
+        width: 100% !important;
+    }
 }

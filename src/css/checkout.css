@@ -26,6 +26,7 @@ section {
   min-height: 100vh;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap-reverse;
 }
 section form {
   width: 45%;
@@ -124,6 +125,19 @@ section .product-info {
   background: whitesmoke;
   min-width: 47%;
   min-height: 50%;
+}
+
+@media (max-width: 920px) {
+  section {
+    flex-wrap: wrap-reverse;
+  }
+  .product-info {
+    width: 100%;
+    min-height: 15rem !important;
+  }
+  form {
+    width: 100% !important;
+  }
 }
 
 /*# sourceMappingURL=checkout.css.map */

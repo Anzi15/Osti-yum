@@ -2,7 +2,7 @@ const form = document.getElementById('form');
 async function handleSubmit(event) {
     event.preventDefault();
     var data = new FormData(event.target);
-    fetch(event.target.action, {
+     fetch(event.target.action, {
       method: form.method,
       body: data,
       headers: {
@@ -27,10 +27,7 @@ async function handleSubmit(event) {
   
     });
 }
-console.log(window.location.origin)
 function thankYou(){
     window.location.replace(`${window.location.origin}/thankyou`)
 }
 form.addEventListener("submit", handleSubmit)
-closeModal.addEventListener("click",modalToggle)
-modal.addEventListener("click",modalToggle)
