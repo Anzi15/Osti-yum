@@ -1,6 +1,4 @@
 let stored_product_id = getParameter("Id");
-const product_cta_btn_cart = document.getElementById('cta-product-cart');
-const product_cta_btn_buy = document.getElementById('cta-product-cart');
 const product_Section = document.getElementById('product_section');
 const product_segments = {
     "title": document.getElementById('product_title'),
@@ -12,7 +10,8 @@ const product_segments = {
     "compared_price": document.getElementById('compared_price'),
     "price": document.getElementById('price'),
     "description": document.getElementById('product_description'),
-    "buy_now_link":document.getElementById('buy-now-link')
+    "buyNowBtn":document.getElementById('buy-now-link'),
+    "cartBtn":document.getElementById('cta-product-cart')
 }
 if(stored_product_id ==null || stored_product_id == undefined){
     setParameter("Id",localStorage.getItem("current_product_id"))
@@ -70,10 +69,18 @@ const loadProduct = function(product){
    document.head.innerHTML += `    <title>${product.title}</title>
    <meta name="description" content="${product.description}">`
 
-   product_cta_btn_cart.addEventListener("click",()=>{
+   product_segments.cartBtn.addEventListener("click",()=>{
     addToCart(product.product_Id)
 })
+ product_segments.buyNowBtn.addEventListener("click",()=>{
+    checkoutSeter(product.product_Id,quantityInput.value)
+ })
 }
-
+function checkoutSeter(elemId,quantity){
+    const product = [
+        elemId, quantity
+    ]
+    localStorage.setItem("checkout_product",JSON.stringify(product))
+}
 getProductId()
 fecther()
