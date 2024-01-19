@@ -16,17 +16,17 @@ section{
         padding: 2rem;
         input,select{
             margin: .2rem 0;
-            min-height: 2.3rem;
+            min-height: 2.8rem;
             font-size: .9rem;
         }
         .big-inp,.short-inp-con{
             padding: 0 .5rem;
-            width: 90% !important;
+            min-width: 90% !important;
             min-width: 15rem;
         }
         .short-inp-con{
             padding: 0;
-            width: 92.3% !important;
+            min-width: 92.3% !important;
             display: flex;
             flex-wrap: wrap;
             gap: 0;
@@ -54,7 +54,7 @@ section{
             }
         }
         select{
-            width: 94%;
+            min-width: 94%;
             flex-direction: row;
             justify-content: left;
         }
@@ -106,9 +106,48 @@ section{
         }
     .product-info{
         background: whitesmoke;
-        min-width: 47%;
+        width: 47%;
         min-height: 50%;
-
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+            .info-con,hr{
+                width: 90%;
+                margin: 1rem 0;
+                .info-each-product{
+                    display: flex;
+                    gap: 1rem;
+                    padding: 1rem 0;
+                    .info-img{
+                        img{
+                            width: 7rem;
+                            aspect-ratio: 1/1;
+                            object-fit: cover;
+                            border-radius: 4px;
+                        }
+                    }
+                    .info-txt{
+                        
+                        h2{
+                            color: #2c2c2c;
+                        }
+                        p{
+                            margin: .4rem 0;
+                            color: #3b3b3b;
+                        }
+                    }
+                }
+            }
+            .total-price{
+                display: grid;
+                gap: .7rem;
+                width: 90%;
+                div{
+                    width: 90%;
+                    justify-content: space-between;
+                    display: flex;
+                }
+            }
     }
 
 }
@@ -118,8 +157,9 @@ section{
         flex-wrap: wrap-reverse;
     }
     .product-info{
-        width: 100%;
+        width: 100% !important;
         min-height: 15rem !important;
+        padding: 2rem 0;
     }
     form{
         width: 100% !important;

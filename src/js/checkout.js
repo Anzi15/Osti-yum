@@ -1,4 +1,7 @@
 const form = document.getElementById('form');
+const order_info_con = document.getElementById('order-info-con');
+const shippingFee = 5;
+
 async function handleSubmit(event) {
     event.preventDefault();
     var data = new FormData(event.target);
@@ -32,11 +35,10 @@ function thankYou(){
 }
 function getOrderDetails(){
     const details = getURlPramas()
-    orderProductGetter(details.src)
-    console.log(``,details)
+    orderProductGetter(details.src,details.qntty)
 }
-function orderProductGetter(id){
-    OrderFetcher(id)
+function orderProductGetter(src,qntty){
+    OrderFetcher(src,qntty)
 }
 function getURlPramas(){
     const searchParams = new URLSearchParams(window.location.search);
@@ -63,7 +65,7 @@ function getURlPramas(){
             src: searchParams.get("src"),
             qntty: searchParams.get("qntty"),
         }
-        return ordered_product
+        return ordered_product_details
     }
 }
 function checkForLocalstorage(what_to_look){
@@ -71,21 +73,29 @@ function checkForLocalstorage(what_to_look){
         return JSON.parse(localStorage.getItem(what_to_look))
     }
 }
-async function OrderFetcher(id){
+async function OrderFetcher(src,qntty){
     await fetch(`../src/json/products.json`)
     .then(response => response.json())
-    .then(response=> filterProduct(response.all_products,id))
+    .then(response=> filterProduct(response.all_products,src,qntty))
 }
-function filterProduct(all_products,id){
-    console.log(``,all_products)
+function filterProduct(all_products,id,qntty){
     all_products.map((eachProducts)=>{
         if(eachProducts.product_Id == id){
-            loadOrder(eachProducts)
+            loadOrder(eachProducts,qntty)
         }
     })
 }
-function loadOrder(){
-    
+function loadOrder(product,qntty){
+    order_info_con.innerHTML += `<div class="info-each-product">
+    <div class="info-img">
+        <img src="${product.image[0]}" alt="">
+    </div>
+    <div class="info-txt">
+        <h2 class="light-heading">${product.title}</h2>
+        <p class="quantity">Quantity: ${qntty}</p>
+        <p class="price"><b>${product.price}</b></p>
+    </div>
+</div>`
 }
 getOrderDetails()
 form.addEventListener("submit", handleSubmit)
