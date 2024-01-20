@@ -69,7 +69,7 @@ const loadProduct = function(product){
    document.head.innerHTML += `    <title>${product.title}</title>
    <meta name="description" content="${product.description}">`
 
-   product_segments.cartBtn.addEventListener("click",()=>{
+product_segments.cartBtn.addEventListener("click",()=>{
     addToCart(product.product_Id)
 })
  product_segments.buyNowBtn.addEventListener("click",()=>{

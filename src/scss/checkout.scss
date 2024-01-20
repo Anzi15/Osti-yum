@@ -4,7 +4,7 @@ section{
     width: 100vw;
     min-height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap-reverse;
     form{
         width: 45%;
@@ -13,16 +13,18 @@ section{
         flex-direction: column;
         gap: 2rem;
         align-items: center;
-        padding: 2rem;
         input,select{
-            margin: .2rem 0;
+            // margin: .2rem 0;
             min-height: 2.8rem;
             font-size: .9rem;
         }
         .big-inp,.short-inp-con{
             padding: 0 .5rem;
-            min-width: 90% !important;
+            min-width: 90%;
             min-width: 15rem;
+        }
+        .big-inp,.short-inp-con,select,.short-inp{
+            margin: .2rem 0;
         }
         .short-inp-con{
             padding: 0;
@@ -33,7 +35,7 @@ section{
             flex-direction: row;
             justify-content: space-between;
             .short-inp{
-                min-width: 44%;
+                width: 45%;
                 padding-left: .5rem;
             }
         }
@@ -155,6 +157,7 @@ section{
 @media (max-width:$breakpoint-midle-tablet) {
     section{
         flex-wrap: wrap-reverse;
+        justify-content: center !important;
     }
     .product-info{
         width: 100% !important;
@@ -162,6 +165,9 @@ section{
         padding: 2rem 0;
     }
     form{
-        width: 100% !important;
+        width: 90% !important;
+    }
+    .short-inp{
+        width: 45% !important;
     }
 }

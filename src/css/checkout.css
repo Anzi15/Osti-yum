@@ -26,7 +26,7 @@ section {
   width: 100vw;
   min-height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap-reverse;
 }
 section form {
@@ -36,17 +36,18 @@ section form {
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  padding: 2rem;
 }
 section form input, section form select {
-  margin: 0.2rem 0;
   min-height: 2.8rem;
   font-size: 0.9rem;
 }
 section form .big-inp, section form .short-inp-con {
   padding: 0 0.5rem;
-  min-width: 90% !important;
+  min-width: 90%;
   min-width: 15rem;
+}
+section form .big-inp, section form .short-inp-con, section form select, section form .short-inp {
+  margin: 0.2rem 0;
 }
 section form .short-inp-con {
   padding: 0;
@@ -58,7 +59,7 @@ section form .short-inp-con {
   justify-content: space-between;
 }
 section form .short-inp-con .short-inp {
-  min-width: 44%;
+  width: 45%;
   padding-left: 0.5rem;
 }
 section form h3 {
@@ -166,6 +167,7 @@ section .product-info .total-price div {
 @media (max-width: 920px) {
   section {
     flex-wrap: wrap-reverse;
+    justify-content: center !important;
   }
   .product-info {
     width: 100% !important;
@@ -173,7 +175,10 @@ section .product-info .total-price div {
     padding: 2rem 0;
   }
   form {
-    width: 100% !important;
+    width: 90% !important;
+  }
+  .short-inp {
+    width: 45% !important;
   }
 }
 

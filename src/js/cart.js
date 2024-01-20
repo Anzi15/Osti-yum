@@ -3,6 +3,7 @@ const empty_cart_sec = document.getElementById('empty_cart_sec');
 const cart_product = document.getElementById('product-cart');
 const productCon = document.getElementById('products-con');
 var price_elems;
+const cart_checkout_btn = document.getElementById('cart-checkout-btn')
 
 const priceUpdater = function(elemId){
     const inpValue = parseInt(document.getElementById(`${elemId}`).value)
@@ -45,7 +46,6 @@ const priceLoader = function(inpValue, productPrice, elemId){
     const product_Price = parseInt(productPrice.split("$")[1])
     priceElem.innerHTML = `$${eval(inpValue * product_Price)}`
     totalPriceUpdater()
-    console.log(inpValue, "*", product_Price)
 }
 const totalPriceDeductor = function(priceDeducted){
     const totalElem = document.getElementById('total-price');
@@ -70,7 +70,7 @@ const removeCartItem = function(cartItem){
     const itemId = cartItem.split("_")[1];
     totalPriceDeductor(`price-${itemId}`)
     const productElem = document.getElementById(`product_${itemId}`);
-    productElem.childNodes[3].children[0].innerHTML="$0"
+    productElem.childNodes[3].children[0].innerHTML=""
     productElem.style.display="none";
     cartItemsUpdater(itemId);
     checkCartEmptyUpStatus()
@@ -172,4 +172,23 @@ function checkCartEmptyUpStatus(action){
         }
     }
 }
+function checkout(){
+    const allCartItems = []
+    const all_products = document.querySelectorAll(".cart-product");
+
+    all_products.forEach(element => {
+        const productID = element.id.split("_")[1];
+        const productPriceElem = document.getElementById(`price-${productID}`)
+        if(productPriceElem.innerHTML!==""){
+            const product_quantity = document.getElementById(`qtty-inp_${productID}`).value;
+            const productObj = {
+                productID,
+                product_quantity
+            }
+            allCartItems.push(productObj)
+        }
+    })
+    localStorage.setItem("checkout_cart",JSON.stringify(allCartItems))
+}
 checkCartEmptyUpStatus(fecther)
+cart_checkout_btn.addEventListener("click",checkout)
