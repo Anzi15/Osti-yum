@@ -5,39 +5,14 @@ const sub_totalElem = document.getElementById('sub-total');
 const totalElem = document.getElementById('total');
 const shippingELem = document.getElementById('shipping-fee');
 
-async function handleSubmit(event) {
-    event.preventDefault();
-    var data = new FormData(event.target);
-     fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: {
-          'Accept': 'application/json'
-      }
-    }).then(response => {
-        thankYou()
-        form.reset()
-      if (!response.ok) {
-        response.json().then(data => {
-          if (Object.hasOwn(data, 'errors')) {
-            (error => error["message"]).join(", ")
-          } else {
-              modal_img.src = `../src/assets/error-svgrepo-com.svg`
-              modal_msg.innerText = `Error occured`
-              modal.classList.add("grid")
-            
-          }
-        })
-      }
-    }).catch(error => {
-  
-    });
-}
+
 function thankYou(){
     window.location.replace(`${window.location.origin}/thankyou`)
 }
 function getOrderDetails(){
     const details = getURlPramas()
+
+        
 }
 function orderProductGetter(src,qntty){
     OrderFetcher(src,qntty)
@@ -49,7 +24,6 @@ function getURlPramas(){
                 src:searchParams.get("src"),
                 qntty:searchParams.get("qntty")
             }
-            orderProductGetter(details.src,details.qntty)
             return ordered_product_details
     }else{
         if(searchParams.get("src") == "cart"){
@@ -57,7 +31,6 @@ function getURlPramas(){
         }else{
             const ordered_product = checkForLocalstorage("checkout_product")
             const ordered_product_Id = ordered_product[0]
-            console.log(``,ordered_product[0])
             searchParams.set("src",ordered_product_Id);
             searchParams.set("qntty",ordered_product[1]);
             const newUrl = `${window.location.origin}${window.location.pathname}?${searchParams.toString()}`;
@@ -66,7 +39,8 @@ function getURlPramas(){
                 src: searchParams.get("src"),
                 qntty: searchParams.get("qntty"),
             }
-            return ordered_product_details
+            orderProductGetter(details.src,details.qntty)
+
         }
     }
 }
@@ -116,7 +90,38 @@ function orderPriceUpdater(price,qntty){
     shippingELem.innerHTML = `$${shippingFee}`
 
     totalElem.innerHTML = `$${currentSubTotal + productPrice * qntty + shippingFee}`
-    console.log(``,price,currentSubTotal);
 }
 getOrderDetails()
-form.addEventListener("submit", handleSubmit)
+
+// form submission 
+
+form.addEventListener("submit", function (e) {
+    alert("submit started")
+    thankYou()
+    const formData = new FormData(form);
+    e.preventDefault();
+    var object = {};
+    formData.forEach((value, key) => {
+      object[key] = value;
+    });
+    var json = JSON.stringify(object);
+  
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    })
+      .then(async (response) => {
+      })
+      .catch((error) => {
+        console.log(error);
+        result.innerHTML = "Something went wrong!";
+      })
+      .then(function () {
+        form.reset();
+      });
+  });
+  

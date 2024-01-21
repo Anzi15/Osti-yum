@@ -48,7 +48,10 @@
         
     </nav>
         <section class="form">
-            <form action="https://formspree.io/f/moqgvlpq" method="POST" id="form" data-customer-information-form="true">
+            <form id="form" action="https://api.web3forms.com/submit" method="POST" data-customer-information-form="true">
+
+          <input type="hidden" name="access_key" value="34099478-b2e7-47fd-ac8d-bd4560f36e38" />
+          <input type="hidden" name="subject" value="New order from Osti-yum" />
                 <div class="contact section--contact-information">
                     <h3 class="light-heading">
                         Contact
@@ -352,19 +355,13 @@
 
                 <div class="payment-method">
                     <h3 class="light-heading">
-                        Payment Details
+                        Payment Method
                     </h3> 
 
-                    <input required maxlength="16" autocomplete="cc-number" class="big-inp" type="number" name="payment-card-number" pattern="[0-9]*" inputmode="numeric" placeholder="Card number">
-                    
-                    <input required autocomplete="cc-name" class="big-inp" type="" name="payment-card-Name" placeholder="Name on card">
-
-                    <div class="short-inp-con">
-                        <input required class="short-inp" autocomplete="cc-exp" type="number" name="payment-card-expiry-date" placeholder="Expiry Date (MM/YY)">
-                        
-                        <input required class="short-inp"  autocomplete="cc-csc" type="text" name="payment-card-cvc" placeholder="CVC">
-
-                    </div>
+                    <select name="Payment method">
+                        <option value="" disabled>no more payment-methods available in your reigion</option>
+                        <option value="Cod" selected>Standard Cash on delivery</option>
+                    </select>
                 </div>
                 <div class="submit-con">
                     <div class="submit-wrapper">
@@ -393,6 +390,24 @@
                 </div>
             </div>
         </section>
+
+        <!-- form submiting library -->
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+
+        <script>
+            function sendMail() {
+                Email.send({
+                    SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+                    To : 'contact.lemme.code@gmail.com',
+                    From : "you@isp.com",
+                    Subject : "This is the subject",
+                    Body : "And this is the body"
+                }).then(
+                  message => alert(message)
+                );
+            }
+        </script>
     <footer>
         <div class="ftr-container">
             <div class="ftr-title"><h2 class="ftr-heading">Ostiyum</h2></div>
