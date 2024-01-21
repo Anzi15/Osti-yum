@@ -3,37 +3,44 @@ const closeModal = document.getElementById('x-close-modal');
 const modal_msg = document.getElementById('modal-msg');
 const modal_img = document.getElementById('modal-img');
 
-async function handleSubmit(event) {
-  event.preventDefault();
-  var data = new FormData(event.target);
-  fetch(event.target.action, {
-    method: form.method,
-    body: data,
-    headers: {
-        'Accept': 'application/json'
-    }
-  }).then(response => {
-    modal.classList.add("grid")
-      form.reset()
-    if (response.ok) {
-        
-    } else {
-      response.json().then(data => {
-        if (Object.hasOwn(data, 'errors')) {
-          (error => error["message"]).join(", ")
-        } else {
-            modal_img.src = `../src/assets/error-svgrepo-com.svg`
-            modal_msg.innerText = `Error occured`
-            modal.classList.add("grid")
-          
-        }
-      })
-    }
-  }).catch(error => {
-
+form.addEventListener("submit", function (e) {
+  const formData = new FormData(form);
+  e.preventDefault();
+  var object = {};
+  formData.forEach((value, key) => {
+    object[key] = value;
   });
-}
+  var json = JSON.stringify(object);
 
-form.addEventListener("submit", handleSubmit)
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json"
+    },
+    body: json
+  })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status == 200) {
+        modal.classList.add("grid")
+      } else {
+        modal.classList.add("grid")
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      modal.classList.add("grid")
+      modal_msg.innerHTML = "Something went wrong!";
+      modal_img.src = "../src/assets/error-svgrepo-com.svg"
+    })
+    .then(function () {
+      form.reset();
+      setTimeout(() => {
+        modal.classList.add("grid")
+      }, 5000);
+    });
+});
+
 closeModal.addEventListener("click",modalToggle)
 modal.addEventListener("click",modalToggle)
