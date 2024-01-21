@@ -60,7 +60,7 @@ function addToCart(product_Id){
  }
 
  function notify(msg){
-  const curentNotification = notify_con.childNodes.length;
+  const curentNotification = notify_con.childNodes.length
   notify_con.classList.add("notification-area")
   notify_con.innerHTML+=`<div class="notification" id="notifiation-${curentNotification}">
   <button onclick="closeNotification('notifiation-${curentNotification}')"><svg xmlns="http://www.w3.org/2000/svg" width="3rem"fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
