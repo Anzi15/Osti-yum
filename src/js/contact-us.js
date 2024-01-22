@@ -3,6 +3,7 @@ const closeModal = document.getElementById('x-close-modal');
 const modal_msg = document.getElementById('modal-msg');
 const modal_img = document.getElementById('modal-img');
 
+//handling form submission by w3 forms
 form.addEventListener("submit", function (e) {
   const formData = new FormData(form);
   e.preventDefault();

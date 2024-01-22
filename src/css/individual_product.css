@@ -95,7 +95,7 @@ li {
   flex-wrap: wrap;
 }
 .product_section .text-area-container .text-area .individual-cta-btn button, .product_section .text-area-container .text-area .individual-cta-btn a {
-  width: 100%;
+  width: 90%;
   border: none;
   padding: 0.75em 2.2em;
   border-radius: 0.25em;
@@ -200,8 +200,8 @@ li {
     width: 100%;
     display: flex;
   }
-  .product_section .text-area-container .text-area .individual-cta-btn button {
-    width: 90%;
+  .product_section .text-area-container .text-area .individual-cta-btn button,a {
+    width: 90% !important;
   }
   .product_section .text-area-container .text-area .des-con .des-heading {
     margin: 1rem 0;

@@ -1,10 +1,11 @@
 const all_products_con = document.getElementById('all-products-con');
+//fetching all products from json
 async function productFetcher(url){
     await fetch(url)
     .then(response => response.json())
     .then(data => loadAllProducts(data.all_products));
 }
-
+//loading into dom
 function loadAllProducts(data){
     console.log(data);
     data.map((elem)=>{

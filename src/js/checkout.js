@@ -5,18 +5,12 @@ const sub_totalElem = document.getElementById('sub-total');
 const totalElem = document.getElementById('total');
 const shippingELem = document.getElementById('shipping-fee');
 
-
+//redirecting to a thank you page
 function thankYou(){
     window.location.replace(`${window.location.origin}/thankyou`)
 }
-function getOrderDetails(){
-    const details = getURlPramas()
 
-        
-}
-function orderProductGetter(src,qntty){
-    OrderFetcher(src,qntty)
-}
+//function to check if the url has a parameters or we have to go with the localstroage as usual
 function getURlPramas(){
     const searchParams = new URLSearchParams(window.location.search);
     if(searchParams.has("src") && searchParams.has("qntty")){
@@ -24,7 +18,7 @@ function getURlPramas(){
                 src:searchParams.get("src"),
                 qntty:searchParams.get("qntty")
             }
-            return ordered_product_details
+            OrderFetcher(ordered_product_details.src,ordered_product_details.qntty)
     }else{
         if(searchParams.get("src") == "cart"){
             handleCartInfo()
@@ -39,17 +33,19 @@ function getURlPramas(){
                 src: searchParams.get("src"),
                 qntty: searchParams.get("qntty"),
             }
-            orderProductGetter(details.src,details.qntty)
+            OrderFetcher(ordered_product_details.src,ordered_product_details.qntty)
 
         }
     }
 }
+
+//handling cart checkout
 function handleCartInfo(){
     const cart_items = JSON.parse(localStorage.getItem("checkout_cart"));
-    cart_items.map((item)=>{
-        orderProductGetter(item.productID,item.product_quantity)
-    })
 
+    cart_items.map((item)=>{
+        OrderFetcher(item.productID,item.product_quantity)
+    })
 }
 function checkForLocalstorage(what_to_look){
     if(localStorage.getItem(what_to_look)){
@@ -91,7 +87,7 @@ function orderPriceUpdater(price,qntty){
 
     totalElem.innerHTML = `$${currentSubTotal + productPrice * qntty + shippingFee}`
 }
-getOrderDetails()
+getURlPramas()
 
 // form submission 
 

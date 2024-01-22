@@ -5,11 +5,15 @@ const productCon = document.getElementById('products-con');
 var price_elems;
 const cart_checkout_btn = document.getElementById('cart-checkout-btn')
 
+//updatig the total price after updating the quantity
 const priceUpdater = function(elemId){
     const inpValue = parseInt(document.getElementById(`${elemId}`).value)
     const splitedId = [elemId.split("_")[1]];
     fecther(splitedId,priceLoader,inpValue)
 }
+
+//updating the quanity of products
+
 const plusOne = function(elemId){
     const bothInp = document.querySelectorAll(`#${elemId}`)
     for(let i=0; i<bothInp.length; i++){
@@ -30,6 +34,8 @@ const quantityUpdater = function(elemId=null,action){
     action(elemId);
     priceUpdater(elemId);
 }
+
+//limiting to select quantity less then 1
 const valueLimiter = function(elemId){
     const elem = document.querySelectorAll(`#${elemId}`);
     
@@ -41,17 +47,23 @@ const valueLimiter = function(elemId){
 
     priceUpdater(elemId);
 }
+
+//counting and listing total price of items
 const priceLoader = function(inpValue, productPrice, elemId){
     const priceElem = document.getElementById(`price-${elemId}`);
     const product_Price = parseInt(productPrice.split("$")[1])
     priceElem.innerHTML = `$${eval(inpValue * product_Price)}`
     totalPriceUpdater()
 }
+
+//overcoming the bug of "price not deducting after removing an item" by making it price 0
 const totalPriceDeductor = function(priceDeducted){
     const totalElem = document.getElementById('total-price');
     const toBeDeducted = parseInt(document.getElementById(priceDeducted).innerHTML.split("$")[1])
     totalElem.innerHTML = `$${    parseInt(totalElem.innerHTML.split("$")[1]) - toBeDeducted}`
 }
+
+//fetching the items fron json file to list 
 async function fecther(cartItems,action,inpValue=null){
     await fetch('../src/json/products.json')
     .then(response => response.json())
@@ -59,6 +71,8 @@ async function fecther(cartItems,action,inpValue=null){
 
 
 }
+
+//updaing the localstorage of cart after removing a project
 const cartItemsUpdater = function(removedItemId){
     const removedItemIndex = cart_items.indexOf(removedItemId);
     if (removedItemIndex > -1) { 
@@ -66,6 +80,8 @@ const cartItemsUpdater = function(removedItemId){
     }
     localStorage.setItem("cart_items",JSON.stringify(cart_items))
 }
+
+//remove a specific item from cart
 const removeCartItem = function(cartItem){
     const itemId = cartItem.split("_")[1];
     totalPriceDeductor(`price-${itemId}`)
@@ -75,9 +91,13 @@ const removeCartItem = function(cartItem){
     cartItemsUpdater(itemId);
     checkCartEmptyUpStatus()
 }
+
+//checking whether cart is empty or not
 const checkCartStatus = function(cartItems){
-  return cartItems.length>0 ? true : false;
+  return cartItems.length> 0 ? true : false;
 }
+
+//updating the totalprice of the cart accordingly
 function totalPriceUpdater(){
     const totalElem = document.getElementById('total-price');
     totalElem.innerHTML="$0"
@@ -88,6 +108,7 @@ function totalPriceUpdater(){
         totalElem.innerHTML = `$${totalElemValue + parseInt(price_elems[i].innerHTML.split("$")[1])}`
     }
 }
+//loading the filtered product into dom
 const loadProduct = function(product){
     productCon.innerHTML += `<div class="cart-product" id="product_${product.product_Id}">
     <div class="all-product-data">
@@ -131,6 +152,8 @@ const loadProduct = function(product){
     </div>
 </div>`
 }
+
+//filtering out items that are in localstorage for cart
 const filterCartItems = function(cartItems,data,action,inpValue){
     
     const cartItemsArr = typeof(cartItems) == "string" ? JSON.parse(cartItems) : cartItems;
@@ -150,6 +173,8 @@ const filterCartItems = function(cartItems,data,action,inpValue){
     totalPriceUpdater()
 
 }
+
+//updating cart based on the existense of products
 function checkCartEmptyUpStatus(action){
     if(!checkCartStatus(cart_items)){
         cart_product.classList.toggle("none")
@@ -172,6 +197,8 @@ function checkCartEmptyUpStatus(action){
         }
     }
 }
+
+//getting things ready to localstorage for checkout
 function checkout(){
     const allCartItems = []
     const all_products = document.querySelectorAll(".cart-product");
