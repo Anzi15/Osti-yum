@@ -83,10 +83,11 @@ section{
             width: 100%;
             align-items: flex-start;
             .submit-wrapper{
-                width: 35%;
                 justify-content: left;
                 align-self: right;
                 input[type="submit"]{
+                    margin: 1rem 0;
+                    padding: 1rem;  
                     height: 3.5rem;
                     border: none !important;
                     font-weight: 550;

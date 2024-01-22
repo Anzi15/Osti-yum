@@ -92,7 +92,6 @@ getURlPramas()
 // form submission 
 
 form.addEventListener("submit", function (e) {
-    alert("submit started")
     thankYou()
     const formData = new FormData(form);
     e.preventDefault();
