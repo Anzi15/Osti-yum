@@ -1,0 +1,46 @@
+@import "config";
+
+.section{
+    width: 95vw;
+    height: 95vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .content-con{
+        min-height: 30%;
+        .content{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                height: 4rem;
+            }
+            h1{
+                margin: 1rem;
+                font-size: 3rem;
+                letter-spacing: .3rem;
+            }
+            a{
+                border: none;
+                display: grid;
+                place-items: center;
+                text-align: center !important;
+                padding: 0.75em 2.2em;
+                border-radius: 0.25em;
+                margin: .3rem;
+                font-size: 1.1em;
+                font-weight: 700;
+                color: $color-bg;
+                margin: 2rem 0;
+                background: $color-light-green;
+                &:hover{
+                    background: $color-dark-green;
+
+                }
+            }
+        }
+    }
+}
