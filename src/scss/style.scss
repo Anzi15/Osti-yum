@@ -48,6 +48,32 @@ body{
         }
     }
 }
+.red-highlight {
+    color: #A31308;
+    font-weight: 550 !important;
+    position: relative;
+    text-decoration: underline;
+    &::before {
+        content: "Foodie-moodie Card";
+        text-wrap: nowrap;
+        text-align: left;
+        overflow: hidden;
+        color: white;
+        height: 100%;
+        width: 0; /* Set initial width to 0 */
+        position: absolute;
+        background: #A31308;
+        transition: width 1s ease, background-color 0.5s ease;
+    }
+
+    &:hover {
+
+        &::before {
+            width: 100%; /* Transition width to 100% on hover */
+        }
+    }
+}
+
 h1{
     font-size: 2rem;
 }
@@ -358,19 +384,19 @@ section{
 
 .sec-4{
     background: $color-ultra-light-green;
-
-    height: 100vh;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
         .sec-4-inner-con{
-        height: 70% !important;
-        display: flex;
-        align-items: center;
+            min-height: 70% !important;
+            display: flex;
+            align-items: center;
             .img-collage{
+                margin-bottom: 4rem;
                 width: 50%;
-                height: 100% !important;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                justify-content: right  ;
                 .column{
                     width: 100%;
                     display: flex;
@@ -382,17 +408,12 @@ section{
                 margin: 1rem;
                 aspect-ratio: 1/1;
                 width: 30%;
-                background: #000;
             }
+            }
+            .txt{
+                min-height: 100%;
             }
 
-            .txt{
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                min-height: 70%;
-                gap: 1.5rem;
-            }
     }
 
 }
@@ -404,12 +425,85 @@ section{
         }
     }
     .sec-4{
+        min-height: 80vh;
         display: grid;
+        align-items: center;
         justify-content: center;
+        .sec-4-inner-con{
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+
+        .txt{
+            margin-bottom: 4rem;
+
+            width: 90%;
+        }
     }
     .img-collage{
         align-items: center;
         width: 100% !important;
+    }
+    .sec-5{
+        .txt{
+            width: 90%;
+        }
+    }
+    img{
+        width: 90% !important;
+    }
+}
+
+.sec-5{
+    flex-wrap: wrap-reverse;
+    width: 100vw;
+    min-height: 80vh;
+    min-height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        user-select: none;
+        margin: 2rem 0;
+        height: 70%;
+        object-fit: cover;
+    }
+    
+    .txt{
+
+    .link-con{
+        margin: 3rem 0;
+        display: flex;
+        justify-content: center;
+
+        a{
+            font-weight: 550;
+            display: flex;
+            align-items: center;
+            height: 3rem;
+            padding: .5rem 1rem;
+            border-radius: 6px;
+                text-decoration: none;
+                background: $color-light-green;
+                color: white;
+                &:hover{
+                    background: $color-dark-green;
+                }
+            
+        }
+    }
+}
+}
+
+.how-to-get-con{
+    margin: 3rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .how-to-get{
+        width: 90%;
+        max-width: 35rem !important;
     }
 }
 //footer

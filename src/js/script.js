@@ -89,3 +89,4 @@ window.addEventListener('load',footerYearUpdater)
 function closeNotification(notifiation_id){
 document.getElementById(notifiation_id).style.display="none"
 }
+

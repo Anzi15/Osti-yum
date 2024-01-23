@@ -75,6 +75,28 @@ body .notification-area .notification button {
   border-radius: 50%;
 }
 
+.red-highlight {
+  color: #A31308;
+  font-weight: 550 !important;
+  position: relative;
+  text-decoration: underline;
+}
+.red-highlight::before {
+  content: "Foodie-moodie Card";
+  text-wrap: nowrap;
+  text-align: left;
+  overflow: hidden;
+  color: white;
+  height: 100%;
+  width: 0; /* Set initial width to 0 */
+  position: absolute;
+  background: #A31308;
+  transition: width 1s ease, background-color 0.5s ease;
+}
+.red-highlight:hover::before {
+  width: 100%; /* Transition width to 100% on hover */
+}
+
 h1 {
   font-size: 2rem;
 }
@@ -363,20 +385,21 @@ section {
 
 .sec-4 {
   background: hsl(169, 70%, 95%);
-  height: 100vh;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
 }
 .sec-4 .sec-4-inner-con {
-  height: 70% !important;
+  min-height: 70% !important;
   display: flex;
   align-items: center;
 }
 .sec-4 .sec-4-inner-con .img-collage {
+  margin-bottom: 4rem;
   width: 50%;
-  height: 100% !important;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
 }
 .sec-4 .sec-4-inner-con .img-collage .column {
   width: 100%;
@@ -388,14 +411,9 @@ section {
   margin: 1rem;
   aspect-ratio: 1/1;
   width: 30%;
-  background: #000;
 }
 .sec-4 .sec-4-inner-con .txt {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 70%;
-  gap: 1.5rem;
+  min-height: 100%;
 }
 
 @media (max-width: 780px) {
@@ -404,14 +422,76 @@ section {
     justify-content: center !important;
   }
   .sec-4 {
+    min-height: 80vh;
     display: grid;
+    align-items: center;
     justify-content: center;
+  }
+  .sec-4 .sec-4-inner-con {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sec-4 .txt {
+    margin-bottom: 4rem;
+    width: 90%;
   }
   .img-collage {
     align-items: center;
     width: 100% !important;
   }
+  .sec-5 .txt {
+    width: 90%;
+  }
+  img {
+    width: 90% !important;
+  }
 }
+.sec-5 {
+  flex-wrap: wrap-reverse;
+  width: 100vw;
+  min-height: 80vh;
+  min-height: 40rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec-5 img {
+  user-select: none;
+  margin: 2rem 0;
+  height: 70%;
+  object-fit: cover;
+}
+.sec-5 .txt .link-con {
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+.sec-5 .txt .link-con a {
+  font-weight: 550;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  background: hsl(169, 100%, 26%);
+  color: white;
+}
+.sec-5 .txt .link-con a:hover {
+  background: #005243;
+}
+
+.how-to-get-con {
+  margin: 3rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.how-to-get-con .how-to-get {
+  width: 90%;
+  max-width: 35rem !important;
+}
+
 footer {
   width: 100vw;
   min-height: 20rem !important;
