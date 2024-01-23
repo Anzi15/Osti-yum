@@ -261,14 +261,17 @@ section {
 }
 .sec-1 .img-container {
   width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .sec-1 .img-container img {
-  height: 100%;
-  width: 100%;
+  width: 85%;
 }
 
 @media (max-width: 780px) {
   .sec-1 {
+    justify-content: center;
     height: 100vh;
     flex-wrap: wrap;
   }
@@ -277,11 +280,9 @@ section {
   }
   .sec-1 .img-container {
     width: 100%;
-    display: flex;
-    justify-content: center;
   }
   .sec-1 .img-container img {
-    width: 100%;
+    width: 90%;
   }
   .sec-3 .m-p-heading {
     margin: 4rem 1rem;
@@ -339,20 +340,78 @@ section {
   width: 100%;
   justify-content: center;
   align-items: center;
+  padding-top: 8rem;
 }
 .sec-3 .container .textarea {
+  height: 80%;
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
 }
 .sec-3 .container .textarea h2 {
   margin: 1rem 0;
 }
 .sec-3 .container .img {
+  display: flex;
+  justify-content: right;
   width: 50%;
 }
 .sec-3 .container .img img {
-  width: 100%;
+  width: 80%;
 }
 
+.sec-4 {
+  background: hsl(169, 70%, 95%);
+  height: 100vh;
+}
+.sec-4 .sec-4-inner-con {
+  height: 70% !important;
+  display: flex;
+  align-items: center;
+}
+.sec-4 .sec-4-inner-con .img-collage {
+  width: 50%;
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sec-4 .sec-4-inner-con .img-collage .column {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sec-4 .sec-4-inner-con .img-collage img {
+  min-width: 10rem;
+  margin: 1rem;
+  aspect-ratio: 1/1;
+  width: 30%;
+  background: #000;
+}
+.sec-4 .sec-4-inner-con .txt {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 70%;
+  gap: 1.5rem;
+}
+
+@media (max-width: 780px) {
+  .sec-3 .container .img {
+    margin: 4rem 0;
+    justify-content: center !important;
+  }
+  .sec-4 {
+    display: grid;
+    justify-content: center;
+  }
+  .img-collage {
+    align-items: center;
+    width: 100% !important;
+  }
+}
 footer {
   width: 100vw;
   min-height: 20rem !important;

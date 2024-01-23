@@ -92,7 +92,6 @@ getURlPramas()
 // form submission 
 
 form.addEventListener("submit", function (e) {
-    thankYou()
     const formData = new FormData(form);
     e.preventDefault();
     var object = {};
@@ -110,6 +109,7 @@ form.addEventListener("submit", function (e) {
       body: json
     })
       .then(async (response) => {
+        thankYou()
       })
       .catch((error) => {
         console.log(error);
@@ -119,4 +119,3 @@ form.addEventListener("submit", function (e) {
         form.reset();
       });
   });
-  
