@@ -4,7 +4,7 @@
     padding: 0;
     font-family: sans-serif;
     overflow-x: hidden;
-    max-width: 100vw;
+    max-width: 100vw !important;
 }
 body{
     width: 100vw;
@@ -139,7 +139,7 @@ a[role="not_link"]{
     background: white;
 }
 nav{
-    height: 2.6rem;
+    min-height: 2.6rem;
     max-width: 100vw;
     .nav-heading{
         color: $color-dark;
@@ -180,7 +180,7 @@ nav{
     }
     .nav-toggler{
         display: none;
-
+        
     }
 
     transition: transform 0.5s ease;
@@ -219,7 +219,8 @@ nav{
     
     .nav-toggler{
         transform: translate(0);
-        display: block !important;
+        display: flex !important;
+        align-items: center;
         z-index: 999 !important;
     }
     nav{
@@ -455,7 +456,7 @@ section{
         }
     }
     img{
-        width: 90% !important;
+        width: 98% !important;
     }
 }
 
